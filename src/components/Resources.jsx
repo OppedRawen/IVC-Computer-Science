@@ -116,7 +116,7 @@ import Organizations from "./Organizations";
 
 function Resources() {
     return (
-        <div className="flex flex-col items-center p-10 bg-[#1d1d20]">
+        <div id ="resources" className="flex flex-col items-center p-10 bg-[#1d1d20]">
             <h1 className="text-3xl font-bold text-[#cacaca] mb-10">Coding Resources</h1>
             <Tab />
         </div>
