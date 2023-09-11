@@ -3,7 +3,7 @@ import React,{useState,useEffect} from 'react';
 
 import './App.css';
 
-import Skills from './skills';
+import Activities from './activities';
 import Footer from "./footer";
 import {Contact,Navbar,Experience,Projects,About,Introduction,Loading} from './components';
 
@@ -28,7 +28,7 @@ useEffect(() => {
           <About />
         </header>
         <Introduction />
-        <Skills />
+        <Activities />
         <Experience />
         <Projects />
         <Contact />

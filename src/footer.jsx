@@ -1,6 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
-import { AiFillGithub,AiFillLinkedin,AiOutlineMail} from "react-icons/ai"
+import { AiFillGithub,AiFillLinkedin,AiOutlineMail,AiFillInstagram} from "react-icons/ai"
 const Footer = ()=>{
 
     return(
@@ -18,6 +18,9 @@ const Footer = ()=>{
           </motion.li>
           <motion.li className="mb-5" initial={{ opacity: 0, x: -70 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 1 }} viewport={{ once: true }}>
             <a href="https://www.linkedin.com/in/dawei-yu-578138227/" target="_blank" rel="noreferrer"><AiFillLinkedin size={30} /></a>
+          </motion.li>
+          <motion.li className="mb-5" initial={{ opacity: 0, x: -70 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 1 }} viewport={{ once: true }}>
+            <a href="https://www.instagram.com/ivccsc/" target="_blank" rel="noreferrer"><AiFillInstagram size={30} /></a>
           </motion.li>
           
           <motion.li initial={{ opacity: 0, x: -70 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 1.5 }} viewport={{ once: true }}>
