@@ -6,6 +6,8 @@ import './App.css';
 import Activities from './activities';
 import Footer from "./footer";
 import {Contact,Navbar,Resources,Projects,About,Introduction,Loading} from './components';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 function App() {
 const [isLoading,setIsLoading]=useState(true);
@@ -18,6 +20,7 @@ useEffect(() => {
   return () => clearTimeout(timer); // Clear the timer when the component is unmounted
 }, []);
   return (
+    <Router>
     <div className=" bg-[#1d1d20] px-10">
     {isLoading ? (
       <Loading />
@@ -36,6 +39,7 @@ useEffect(() => {
       </>
     )}
   </div>
+  </Router>
   );
 }
 

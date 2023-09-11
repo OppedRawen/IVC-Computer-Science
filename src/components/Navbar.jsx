@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return(
 
-  <nav className="py-10 mb-12 flex justify-between text-[#cacaca]">
+  <nav className="py-10 mb-12 flex justify-between text-[#cacaca] ">
       {/* <h1 className="text-lg font-burtons font-semibold">Portfolio</h1> */}
       <HiOutlineDesktopComputer className="text-3xl font-bold w-10 h-10"/>
       
