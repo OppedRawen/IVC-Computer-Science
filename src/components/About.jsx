@@ -41,10 +41,12 @@ const About = () => {
         >
           <TypeAnimation
             sequence={[
-              'Inspiring',
-              1000, 
-              'Inspiring Innovation',
-              1000,
+              'A Space for Creative Ideas',
+              2000, 
+              'Engaging Activities',
+              2000,
+              'Collaborative Projects',
+              2000,
               'Inspiring Innovation & Creativity',
               2000
             ]}
