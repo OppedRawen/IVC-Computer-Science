@@ -5,7 +5,7 @@ import './App.css';
 
 import Activities from './activities';
 import Footer from "./footer";
-import {Contact,Navbar,Experience,Projects,About,Introduction,Loading} from './components';
+import {Contact,Navbar,Resources,Projects,About,Introduction,Loading} from './components';
 
 function App() {
 const [isLoading,setIsLoading]=useState(true);
@@ -29,7 +29,7 @@ useEffect(() => {
         </header>
         <Introduction />
         <Activities />
-        <Experience />
+        <Resources />
         <Projects />
         <Contact />
         <Footer />

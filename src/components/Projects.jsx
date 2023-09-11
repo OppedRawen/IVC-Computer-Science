@@ -44,11 +44,11 @@ const Projects = () => {
             opacity: 1, 
             y: 0,
             transition: {
-                delay: 0.1,
-                duration: 0.1,
+                delay: 0.75,
+                duration: 0.4,
                 type: 'tween',
-                delayChildren: 0.2,
-                staggerChildren: 0.2
+                delayChildren: 0.5,
+                staggerChildren: 0.4
             }
         }
       };
