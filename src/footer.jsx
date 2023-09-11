@@ -11,7 +11,7 @@ const Footer = ()=>{
         </div>
 
 
-        <div className="social hidden md:block fixed top-[50%] z-10">
+        <div className="social hidden md:flex fixed top-[50%] z-10">
         <ul className="list-none flex flex-col">
           <motion.li className="mb-5" initial={{ opacity: 0, x: -70 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: .75 }} viewport={{ once: true }}>
             <a href="https://github.com/OppedRawen" target="_blank" rel="noreferrer"><AiFillGithub size={30} /></a>
