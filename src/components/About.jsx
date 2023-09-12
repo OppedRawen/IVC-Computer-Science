@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
-
+import { Link } from "react-router-dom";
 const About = () => {
   const handleLinkClick = (e, sectionId) => {
     e.preventDefault();
@@ -89,21 +89,21 @@ const About = () => {
         transition={{ duration: 0.5, delay: 2 }}
       >
         <motion.a
-          href="#projects"
+          href="#activities"
           className="text-2xl sm:text-3xl inline-block rounded-lg px-4 py-2 text-teal-500 border border-teal-500 bg-transparent"
           whileTap={{ scale: 0.95 }}
-          onClick={(e) => handleLinkClick(e, "projects")}
+      
         >
-          <span className="">Projects</span>
+          <Link to="/activities">Activities</Link>
         </motion.a>
 
         <motion.a
-          href="#contact"
+          href="#resources"
           className="text-2xl sm:text-3xl inline-block px-4 py-2 rounded-lg text-teal-500 border border-teal-500 bg-transparent"
           whileTap={{ scale: 0.95 }}
           onClick={(e) => handleLinkClick(e, "contact")}
         >
-          <span className="">Contact Us!</span>
+          <Link to="/resources">Resources</Link>
         </motion.a>
       </motion.div>
     </motion.div>
