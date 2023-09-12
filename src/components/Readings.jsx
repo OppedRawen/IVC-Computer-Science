@@ -4,23 +4,26 @@ import ToggleItem from "./ToggleItem";
 import Tags from "./Tags";
 function Readings() {
 	return (
-		<div>
-			{readingsMap.map(reading => {
+		<ul className="resource-list space-y-4">
+            	{readingsMap.map(reading => {
 				return (
-					<ToggleItem
-						key={reading.id}
-						id={reading.id}
-						title={reading.title}
-						publicationDate={reading.publicationDate}
-						description={reading.description}
-						url={reading.url}
-						urlText="Read it here"
-					>
-						<Tags tags={reading.tags} />
-					</ToggleItem>
-				);
+                    <li key={reading.id} className="border-b border-gray-600 pb-4">
+                        <ToggleItem
+                            id={reading.id}
+                            title={reading.title}
+                            publicationDate={reading.publicationDate}
+                            description={reading.description}
+                            url={reading.url}
+                            urlText="Read it here"
+                        >
+                            <Tags tags={reading.tags} />
+                        </ToggleItem>
+                    </li>
+                );
 			})}
-		</div>
+        </ul>
+		
+		
 	);
 }
 

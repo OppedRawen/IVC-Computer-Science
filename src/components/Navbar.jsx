@@ -51,29 +51,29 @@ const Navbar = () => {
                 <ul className="flex flex-col items-start md:flex-row md:items-center md:justify-end text-sm space-y-4 md:space-y-0">
                     <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
                         <motion.a
-                            href="#experience"
+                            href="#activities"
                             whileTap={{ scale: 0.95 }}
-                            onClick={(e) => handleLinkClick(e, "experience")}
+                          
                         >
-                            Activities
+                            <Link to="/activities" onClick={() => setMenuOpen(false)}>Activities</Link>
                         </motion.a>
                     </li>
                     <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
                         <motion.a
                             href="#projects"
                             whileTap={{ scale: 0.95 }}
-                            onClick={(e) => handleLinkClick(e, "projects")}
+                      
                         >
-                            Projects
+                          <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
                         </motion.a>
                     </li>
                     <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
                         <motion.a
                             href="#contact"
                             whileTap={{ scale: 0.95 }}
-                            onClick={(e) => handleLinkClick(e, "contact")}
+                          
                         >
-                            Contact
+                           <Link to="/contact" onClick={() => setMenuOpen(false)}> Contact</Link>
                         </motion.a>
                     </li>
                     <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">

@@ -31,13 +31,16 @@ useEffect(() => {
            
             <Routes>
               <Route path="/resources" element={<Resources />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path = "/activities" element={<Activities />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/" element={
                 <>
                   <About />
                   <Introduction />
-                  <Activities />
+                  {/* <Activities />
                   <Projects />
-                  <Contact />
+                  <Contact /> */}
                   <Footer />
                 </>
               } />

@@ -5,8 +5,9 @@ import Tags from "./Tags";
 
 function Tutorials() {
 	return (
-		<ul className="resource-list">
+		<ul className="resource-list space-y-4">
 			{tutorialsMap.map(tutorial => (
+                <li key={tutorial.id} className="border-b border-gray-600 pb-4">
 				<ToggleItem
 					key={tutorial.id}
 					id={tutorial.id}
@@ -17,6 +18,7 @@ function Tutorials() {
 				>
 					<Tags tags={tutorial.tags} />
 				</ToggleItem>
+                </li>
 			))}
 		</ul>
 	);
