@@ -1,14 +1,27 @@
 import { organizationsMap } from "./fakeData";
-
+import {motion} from 'framer-motion';
 import ToggleItem from "./ToggleItem";
 import Tags from "./Tags";
 
 function Organizations() {
+    const listItem = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    };
+    
+    const container = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
 	return (
-		<ul className="resource-list space-y-4">
-           
+        <motion.ul className="resource-list space-y-4" variants={container} initial="hidden" animate="visible">
 			{organizationsMap.map(org => (
-                 <li key={Organizations.id} className="border-b border-gray-600 pb-4">
+                 <motion.li key={Organizations.id} className="border-b border-gray-600 pb-4" variants={listItem}>
 				<ToggleItem
 					key={org.id}
 					id={org.id}
@@ -19,9 +32,9 @@ function Organizations() {
 				>
 					<Tags tags={org.tags} />
 				</ToggleItem>
-                </li>
+                </motion.li>
 			))}
-		</ul>
+		</motion.ul>
 	);
 }
 

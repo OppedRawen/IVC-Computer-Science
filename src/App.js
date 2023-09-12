@@ -41,10 +41,11 @@ useEffect(() => {
                   {/* <Activities />
                   <Projects />
                   <Contact /> */}
-                  <Footer />
+                  
                 </>
               } />
             </Routes>
+            <Footer />
           </>
         )}
       </div>
