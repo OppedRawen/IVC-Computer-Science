@@ -1,7 +1,5 @@
 import React from "react";
-import {motion} from 'framer-motion';
-import { AiFillGithub} from "react-icons/ai";
-import {FiExternalLink} from 'react-icons/fi';
+
 const Projects = () => {
   
     return(

@@ -21,14 +21,7 @@ const Navbar = () => {
       }
       setMenuOpen(prev => !prev);
   };
-    const handleLinkClick = (e, sectionId) => {
-        e.preventDefault();
-        setMenuOpen(false);
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+
 
     return (
         <nav className="py-10 mb-12 flex justify-between text-[#cacaca]  z-20">
