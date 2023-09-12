@@ -6,7 +6,7 @@ import './App.css';
 import Activities from './activities';
 import Footer from "./footer";
 import {Contact,Navbar,Resources,Projects,About,Introduction,Loading} from './components';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 
 
 function App() {
@@ -21,25 +21,31 @@ useEffect(() => {
 }, []);
   return (
     <Router>
-    <div className=" bg-[#1d1d20] px-10">
-    {isLoading ? (
-      <Loading />
-    ) : (
-      <>
-        <header className=" min-h-screen">
-          <Navbar />
-          <About />
-        </header>
-        <Introduction />
-        <Activities />
-        <Resources />
-        <Projects />
-        <Contact />
-        <Footer />
-      </>
-    )}
-  </div>
-  </Router>
+      <div className="bg-[#1d1d20] px-10">
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+           
+              <Navbar />
+           
+            <Routes>
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/" element={
+                <>
+                  <About />
+                  <Introduction />
+                  <Activities />
+                  <Projects />
+                  <Contact />
+                  <Footer />
+                </>
+              } />
+            </Routes>
+          </>
+        )}
+      </div>
+    </Router>
   );
 }
 
