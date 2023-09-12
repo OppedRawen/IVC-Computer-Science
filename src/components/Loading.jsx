@@ -26,7 +26,7 @@ const Loading = () => {
               <motion.div
                 className="mt-14 h-2 w-40 bg-gray-200 rounded"
                 initial={{ width: 0 }}
-                animate={{ width: '40%' }}
+                animate={{ width: '50%' }}
                 transition={{ duration: 1 }}
               ></motion.div>
             </div>

@@ -4,13 +4,14 @@ import { useLocation } from "react-router-dom";
 import Readings from "./Readings";
 import Tutorials from "./Tutorials";
 import Organizations from "./Organizations";
+import {motion} from 'framer-motion';
 
 function Resources() {
     return (
-        <div id ="resources" className="flex flex-col items-center p-10 bg-[#1d1d20]">
+        <motion.div id="resources" className="flex flex-col items-center p-10 bg-[#1d1d20]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
             <h1 className="text-3xl font-bold text-[#cacaca] mb-10">Coding Resources</h1>
             <Tab />
-        </div>
+        </motion.div>
     );
 }
 
@@ -43,12 +44,12 @@ function Tab() {
 
     return (
         <div className="w-full mt-6 text-[#cacaca]">
-            <div className="flex flex-wrap justify-between mb-4 space-x-4">
+            <div className="flex flex-wrap justify-between mb-4 space-x-4 md:space-x-0 md:grid md:grid-cols-3">
                 {buttonsList.map((tabButton, idx) => (
                     <button
                         key={idx + 1}
                         onClick={() => toggleTab(idx + 1)}
-                        className={`py-2 px-4 text-lg border rounded-lg transition-colors duration-200 ease-in-out 
+                        className={`py-1 px-2 md:py-2 md:px-4 text-sm md:text-lg border rounded-lg transition-colors duration-200 ease-in-out 
                         ${tabState === idx + 1 ? 'bg-[#ff9617] text-[#212121]' : 'bg-[#2a2c2e] text-white'}`}
                     >
                         {tabButton}
