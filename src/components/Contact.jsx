@@ -10,7 +10,23 @@ const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-      // ... your sendEmail logic
+
+      e.preventDefault();
+  
+      emailjs.sendForm(process.env.REACT_APP_SERVICE_KEY, process.env.REACT_APP_TEMPLATE_KEY, form.current, process.env.REACT_APP_API_KEY)
+        .then((result) => {
+            console.log(result.text);
+            console.log('message sent');
+            setVerification("Message Sent!, looking forward to connecting!");
+        }, (error) => {
+            console.log(error.text);
+            console.log('message failed');
+            setVerification("Message Failed to Send!");
+        });
+
+        setEmail("");
+        setName("");
+        setMessage("");
     };
 
     const fieldVariants = {
