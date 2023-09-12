@@ -61,7 +61,7 @@ const About = () => {
 
         {/* Image Display */}
         <motion.img
-          className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden"
+          className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden z-0"
           src="compsci2.png"
           alt="profileImage"
           initial={{ opacity: 0 }}
@@ -83,7 +83,7 @@ const About = () => {
 
       {/* Navigation Buttons */}
       <motion.div
-        className="text-4xl flex justify-center gap-10 py-3 pb-8"
+        className="text-4xl flex justify-center gap-10 py-3 pb-8 sm:pb-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 2 }}
