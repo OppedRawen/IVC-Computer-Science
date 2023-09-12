@@ -9,17 +9,18 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const [sidebarHeight, setSidebarHeight] = useState('100vh');
+    const [menuHeight, setMenuHeight] = useState(window.innerWidth > 768 ? 'auto' : '100vh');
+
     const toggleMenu = () => {
-      setMenuOpen(prev => !prev);
-      if (!menuOpen) { // If about to open
-        setSidebarHeight(`${document.body.scrollHeight}px`);
+      if (!menuOpen && window.innerWidth <= 768) { 
+          setMenuHeight(`${document.body.scrollHeight}px`);
+      } else if (window.innerWidth <= 768) {
+          setMenuHeight('100vh');
       } else {
-        setSidebarHeight('100vh');
+          setMenuHeight('auto');
       }
-    };
-    
+      setMenuOpen(prev => !prev);
+  };
     const handleLinkClick = (e, sectionId) => {
         e.preventDefault();
         setMenuOpen(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
                 <GiHamburgerMenu onClick={toggleMenu} className="cursor-pointer" />
             </div>
             
-            <div className={`absolute top-0 right-0 h-full w-64 bg-[#1d1d25] transform ${menuOpen ? 'translate-x-0 pt-10'  : 'translate-x-full'} transition-transform duration-300 ease-in-out md:static md:transform-none z-50 `}  style={{ minHeight: `${document.body.scrollHeight}px` }}>
+            <div className={`absolute top-0 right-0 w-64 bg-[#1d1d25] transform ${menuOpen ? 'translate-x-0 pt-10'  : 'translate-x-full'} transition-transform duration-300 ease-in-out md:static md:transform-none z-50 `}  style={{minHeight:menuHeight}}>
                {/* Close Button */}
                <button 
                     className="md:hidden absolute top-2 right-2"
