@@ -1,7 +1,7 @@
-# V1: Portfolio
+# V1: IVC CS Portfolio
 
 IVC CS Club portfolio, let me know if there is anything I can improve!
-[My Deployed site](https://davidyu.netlify.app/)
+[My Deployed site](https://ivccsclub.netlify.app/)
 
 
   
