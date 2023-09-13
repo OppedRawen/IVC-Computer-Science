@@ -10,7 +10,7 @@ const Introduction = () => {
             <motion.h2
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
                 viewport={{ once: true }}
             >
                 About Our Club
@@ -22,7 +22,7 @@ const Introduction = () => {
                 className="shadow-lg rounded-md md:hidden w-full max-w-xs mx-auto mt-4 mb-8"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.75 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
                 viewport={{ once: true }}
             />
 
@@ -34,7 +34,7 @@ const Introduction = () => {
                 className="text-[#cacaca] mt-4 text-[16px] leading-6"
                  initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 1 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
                 viewport={{ once: true }}  
                 >
                      Welcome to the Computer Science Club! We are a collective of motivated students eager to immerse fellow learners into the captivating realm of computer science. Our mission is to demystify programming, starting with the basics, and gradually progressing towards more advanced topics.
@@ -43,7 +43,7 @@ const Introduction = () => {
                 className="text-[#cacaca] mt-4 text-[16px] leading-6"
                  initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 1 }}
+                transition={{ duration: 0.4, delay: 0.15 }}
                 viewport={{ once: true }}  
                 >
                      Our journey together will explore various programming languages, including <span className="font-bold text-[#54d5bb]">Java</span>, <span className="font-bold text-[#54d5bb]">Python</span>, <span className="font-bold text-[#54d5bb]">C++</span>, and <span className="font-bold text-[#54d5bb]">Javascript</span>. Furthermore, we'll dive into fundamental concepts such as <span className="font-bold text-[#54d5bb]">algorithms</span> and <span className="font-bold text-[#54d5bb]">data structures</span> that form the backbone of computational thinking.
@@ -52,7 +52,7 @@ const Introduction = () => {
                 className="text-[#cacaca] mt-4 text-[16px] leading-6"
                  initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
                 viewport={{ once: true }}  
                 >
                      Beyond just theory, our club offers hands-on experience. We hold regular <span className="font-bold text-[#54d5bb]">coding workshops</span>, tackling challenges that will sharpen your problem-solving skills. Our collaborative projects span various domains, from game development to web applications, providing an opportunity to apply knowledge in real-world scenarios.
@@ -61,7 +61,7 @@ const Introduction = () => {
                 className="text-[#cacaca] mt-4 text-[16px] leading-6"
                  initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 1 }}
+                transition={{ duration: 0.4, delay: 0.25 }}
                 viewport={{ once: true }}  
                 >
                      And let's not forget the fun part! Every other week, we celebrate our progress and camaraderie with delightful treats like <span className="font-bold text-[#54d5bb]">pizza</span> and <span className="font-bold text-[#54d5bb]">burgers</span>. After all, what's coding without some comfort food, right?
@@ -75,7 +75,7 @@ const Introduction = () => {
                         className="shadow-lg rounded-md"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.75 }}
+                        transition={{ duration: 0.4, delay: 0.3 }}
                         viewport={{ once: true }}
                     />
                 </div>
