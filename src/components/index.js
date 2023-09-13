@@ -10,4 +10,5 @@ import Readings from "./Readings";
 import Tutorials from "./Tutorials";
 import ToggleItem from "./ToggleItem";
 import Tags from "./Tags";
-export {Contact, Navbar,Resources,Projects,About,Introduction,Loading,Organizations,Readings,Tutorials,ToggleItem,Tags};
+import SocialLinks from "./SocialLinks";
+export {Contact, Navbar,Resources,Projects,About,Introduction,Loading,Organizations,Readings,Tutorials,ToggleItem,Tags,SocialLinks};

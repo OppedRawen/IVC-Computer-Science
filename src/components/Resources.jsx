@@ -8,7 +8,7 @@ import {motion} from 'framer-motion';
 
 function Resources() {
     return (
-        <motion.div id="resources" className="flex flex-col items-center p-10 bg-[#1d1d20]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+        <motion.div id="resources" className="flex flex-col items-center p-10 bg-[#1d1d20] overflow-y-auto h-full max-h-screen" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
             <h1 className="text-3xl font-bold text-[#cacaca] mb-10">Coding Resources</h1>
             <Tab />
         </motion.div>

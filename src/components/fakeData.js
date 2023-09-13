@@ -2,9 +2,7 @@
  * This file is only used for testing during frontend development. It will be removed after configured with backend
  */
 
-/**
- * TODO: Delete this map once configured with mongodb
- */
+     
 export const tutorialsMap = [
 	{
 		id: 1,
@@ -296,4 +294,18 @@ export const organizationsMap = [
 		url: "https://www.hackuci.com/",
 		tags: ["hackathon"],
 	},
+];
+export const projectsMap = [
+{
+	id:1,
+	title:"McDonaldsorKFCquiz",
+	description:"A quiz to determine if you are a McDonalds or KFC person",
+
+},
+{
+	id:2,
+	title:"personality-quiz",
+	description:"A quiz to determine your personality",
+	
+}
 ];

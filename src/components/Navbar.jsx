@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
-
+import SocialLinks from './SocialLinks';
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [menuHeight, setMenuHeight] = useState(window.innerWidth > 768 ? 'auto' : '100vh');
@@ -14,6 +14,7 @@ const Navbar = () => {
     const toggleMenu = () => {
       if (!menuOpen && window.innerWidth <= 768) { 
           setMenuHeight(`${document.body.scrollHeight}px`);
+          document.body.style.overflow = 'hidden';
       } else if (window.innerWidth <= 768) {
           setMenuHeight('100vh');
       } else {
@@ -33,7 +34,7 @@ const Navbar = () => {
                 <GiHamburgerMenu onClick={toggleMenu} className="cursor-pointer" />
             </div>
             
-            <div className={`absolute top-0 right-0 w-64 bg-[#1d1d25] transform ${menuOpen ? 'translate-x-0 pt-10'  : 'translate-x-full'} transition-transform duration-300 ease-in-out md:static md:transform-none z-50 `}  style={{minHeight:menuHeight}}>
+            <div className={` absolute top-0 right-0 w-64 bg-[#1d1d25] transform ${menuOpen ? 'translate-x-0 pt-10'  : 'translate-x-full'} transition-transform duration-300 ease-in-out md:static md:transform-none z-50 `}  style={{minHeight:menuHeight}}>
                {/* Close Button */}
                <button 
                     className="md:hidden absolute top-2 right-2"
@@ -79,6 +80,9 @@ const Navbar = () => {
                     </li>
                    
                 </ul>
+                <div className=" mt-10 md:hidden ">  {/* Push the social links to the bottom */}
+                <SocialLinks layout="horizontal"/>
+            </div>
             </div>
         </nav>
     );

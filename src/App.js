@@ -12,16 +12,20 @@ import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 function App() {
 const [isLoading,setIsLoading]=useState(true);
 useEffect(() => {
+  
   // Simulating a 1-second delay before loading the main page
   const timer = setTimeout(() => {
     setIsLoading(false);
   }, 1500);
 
-  return () => clearTimeout(timer); // Clear the timer when the component is unmounted
+  return () =>{
+    document.body.style.overflow = "auto";
+    clearTimeout(timer);
+  } // Clear the timer when the component is unmounted
 }, []);
   return (
     <Router>
-      <div className="bg-[#1d1d20] px-10">
+      <div className="bg-[#1d1d20] px-10 overflow-hidden">
         {isLoading ? (
           <Loading />
         ) : (
