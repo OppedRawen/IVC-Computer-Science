@@ -1,5 +1,6 @@
 
 import React,{useState,useEffect} from 'react';
+import { ThemeContext } from './components/ThemeContext';
 
 import './App.css';
 
@@ -9,8 +10,17 @@ import {Contact,Navbar,Resources,Projects,About,Introduction,Loading} from './co
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 
 
+
 function App() {
 const [isLoading,setIsLoading]=useState(true);
+const [isDarkMode, setIsDarkMode] = useState(false);
+useEffect(() => {
+  if (isDarkMode) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+}, [isDarkMode]);
 useEffect(() => {
   
   // Simulating a 1-second delay before loading the main page
@@ -24,14 +34,18 @@ useEffect(() => {
   } // Clear the timer when the component is unmounted
 }, []);
   return (
+    <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode: () => setIsDarkMode(prev => !prev) }}>
     <Router>
-      <div className="bg-[#1d1d20] px-10 overflow-hidden">
+   <div className={` pl-5 overflow-x-hidden bg-[#1d1d20] : 'bg-stone-100 text-gray-500'}`}>
+
+
+
         {isLoading ? (
           <Loading />
         ) : (
           <>
            
-              <Navbar />
+           <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(prev => !prev)} />
            
             <Routes>
               <Route path="/resources" element={<Resources />} />
@@ -54,6 +68,7 @@ useEffect(() => {
         )}
       </div>
     </Router>
+    </ThemeContext.Provider>
   );
 }
 

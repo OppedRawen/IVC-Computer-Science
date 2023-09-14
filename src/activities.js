@@ -28,7 +28,7 @@ const Activities = () => {
         }
     };
 
-    // This data can be extracted out for cleanliness, similar to your projects page
+
     const activities = [
         {
             imgSrc: "compsci4.jpg",
