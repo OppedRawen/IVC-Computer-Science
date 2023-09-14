@@ -8,7 +8,7 @@ import Activities from './pages/activities';
 import Footer from "./components/footer";
 import {Navbar,Loading} from './components';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
-import {Contact,Resources,About,Introduction,Projects} from './pages';
+import {Contact,Resources,About,Introduction,Projects,ConceptIntroductions} from './pages';
 
 
 function App() {
@@ -52,6 +52,7 @@ useEffect(() => {
               <Route path="/projects" element={<Projects />} />
               <Route path = "/activities" element={<Activities />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/activities/concept-introductions" element={<ConceptIntroductions />} />
               <Route path="/" element={
                 <>
                   <About />

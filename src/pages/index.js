@@ -4,5 +4,5 @@ import Contact from './Contact';
 import Introduction from './Introduction';
 import Projects from './Projects';
 import Resources from './Resources';
-
-export { About, Activities, Contact, Introduction, Projects, Resources };
+import ConceptIntroductions from './ConceptIntroductions';
+export { About, Activities, Contact, Introduction, Projects, Resources, ConceptIntroductions };
