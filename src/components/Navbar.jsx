@@ -7,7 +7,9 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
-const Navbar = () => {
+// import {MdOutlineDarkMode} from 'react-icons/md';
+// import {MdOutlineLightMode} from 'react-icons/md';
+const Navbar = ({ isDarkMode, toggleDarkMode }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [menuHeight, setMenuHeight] = useState(window.innerWidth > 768 ? 'auto' : '100vh');
 
@@ -78,6 +80,11 @@ const Navbar = () => {
                           <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
                         </motion.a>
                     </li>
+                    {/* <li>
+                    <button onClick={toggleDarkMode}  className="w-1/2 m-2 p-3 flex justify-center items-center text-slate-400 hover:text-gray-800 cursor-pointer">
+                    {isDarkMode ? <MdOutlineDarkMode className="" /> : <MdOutlineLightMode />}
+                  </button>
+                    </li> */}
                    
                 </ul>
                 <div className=" mt-10 md:hidden ">  {/* Push the social links to the bottom */}
