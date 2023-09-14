@@ -7,7 +7,7 @@ import { AiFillGithub,AiFillLinkedin,AiOutlineMail,AiFillInstagram} from "react-
 const SocialLinks = ({ layout }) => {
 
   const containerClasses = layout === 'horizontal' ? 'flex-row space-x-4' : 'flex-col space-y-4';
-  const itemClasses = layout === 'horizontal' ? 'mb-0' : 'mb-5';
+  const itemClasses = layout === 'horizontal' ? 'mb-0' : 'mb-1';
 
   return (
     <div className={`flex ${containerClasses}`}>

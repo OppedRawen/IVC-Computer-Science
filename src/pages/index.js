@@ -5,4 +5,7 @@ import Introduction from './Introduction';
 import Projects from './Projects';
 import Resources from './Resources';
 import ConceptIntroductions from './ConceptIntroductions';
-export { About, Activities, Contact, Introduction, Projects, Resources, ConceptIntroductions };
+import GuestLectures from './GuestLectures';
+import CodingChallenge from './CodingChallenge';
+import TeamProjects from './TeamProjects';
+export { About, Activities, Contact, Introduction, Projects, Resources, ConceptIntroductions, GuestLectures, CodingChallenge, TeamProjects };
