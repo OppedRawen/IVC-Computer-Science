@@ -36,7 +36,7 @@ const Introduction = () => {
     transition={{ duration: 0.4, delay: 0.1 }}
     viewport={{ once: true }}  
 >
-    Welcome to the Computer Science Club, where we dive deep into the enchanting world of coding every <span className="font-bold text-[#54d5bb]">Wednesday at 11am</span>. Our dedicated sessions rotate between illuminating topic introductions — ranging from programming languages like <span className="font-bold text-[#54d5bb]">Java</span>, <span className="font-bold text-[#54d5bb]">Python</span>, and <span className="font-bold text-[#54d5bb]">C++</span> to diverse frameworks — guest lectures from industry experts, and engaging coding challenges.
+    Welcome to the Computer Science Club, where we dive deep into the enchanting world of coding every <span className="font-bold text-[#54d5bb]">Wednesday at 11am</span>. Our dedicated sessions rotate between topic introductions — ranging from programming languages like <span className="font-bold text-[#54d5bb]">Java</span>, <span className="font-bold text-[#54d5bb]">Python</span>, and <span className="font-bold text-[#54d5bb]">C++</span> to diverse frameworks — guest lectures from industry experts, and engaging coding challenges.
 </motion.p>
 
 <motion.p

@@ -27,7 +27,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
 const toggleMenu = () => {
   if (!menuOpen && window.innerWidth <= 768) { 
       setMenuHeight(`${document.body.scrollHeight}px`);
-      document.body.style.overflow = 'hidden';
+    //   document.body.style.overflow = 'hidden';
   } else {
       document.body.style.overflow = 'auto'; // Ensure overflow is set to auto whenever the menu is not fully opened in mobile view.
       if (window.innerWidth <= 768) {

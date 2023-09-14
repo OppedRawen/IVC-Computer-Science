@@ -53,7 +53,7 @@ const Activities = () => {
     ];
 
     return (
-        <div id="activities" className="flex overflow-y-auto justify-center items-center ">
+        <div id="activities" className="flex justify-center items-center ">
             <div className="container mx-auto max-w-screen-lg">
                 <h2 className="text-gray-400 font-bold text-3xl mb-6 text-center">Club Activities</h2>
                 <section className="max-w-screen-xl m-auto md:pl-20 px-8 py-24 sm:32">
