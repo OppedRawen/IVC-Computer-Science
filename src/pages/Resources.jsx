@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Readings from "./Readings";
-import Tutorials from "./Tutorials";
-import Organizations from "./Organizations";
+import Readings from "../components/Readings";
+import Tutorials from "../components/Tutorials";
+import Organizations from "../components/Organizations";
 import {motion} from 'framer-motion';
 
 function Resources() {

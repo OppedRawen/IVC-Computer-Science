@@ -4,11 +4,11 @@ import { ThemeContext } from './components/ThemeContext';
 
 import './App.css';
 
-import Activities from './activities';
-import Footer from "./footer";
-import {Contact,Navbar,Resources,Projects,About,Introduction,Loading} from './components';
+import Activities from './pages/activities';
+import Footer from "./components/footer";
+import {Navbar,Loading} from './components';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
-
+import {Contact,Resources,About,Introduction,Projects} from './pages';
 
 
 function App() {
