@@ -36,7 +36,7 @@ const Introduction = () => {
     transition={{ duration: 0.4, delay: 0.1 }}
     viewport={{ once: true }}  
 >
-    Welcome to the Computer Science Club, where we dive deep into the enchanting world of coding every <span className="font-bold text-[#54d5bb]">Wednesday at 11am</span>. Our dedicated sessions rotate between topic introductions — ranging from programming languages like <span className="font-bold text-[#54d5bb]">Java</span>, <span className="font-bold text-[#54d5bb]">Python</span>, and <span className="font-bold text-[#54d5bb]">C++</span> to diverse frameworks — guest lectures from industry experts, and engaging coding challenges.
+    At IVC Computer Science Club, we dive deep into the world of coding every <span className="font-bold text-[#54d5bb]">Wednesday at 11am</span>. Our dedicated sessions rotate between topic introductions — ranging from programming languages like <span className="font-bold text-[#54d5bb]">Java</span>, <span className="font-bold text-[#54d5bb]">Python</span>, and <span className="font-bold text-[#54d5bb]">C++</span> to diverse frameworks — guest lectures from industry experts, and engaging coding challenges.
 </motion.p>
 
 <motion.p
@@ -56,7 +56,7 @@ const Introduction = () => {
     transition={{ duration: 0.4, delay: 0.2 }}
     viewport={{ once: true }}  
 >
-    Learning with us is not just about coding; it's an experience. We ensure our sessions are enjoyable by bringing in delectable treats like <span className="font-bold text-[#54d5bb]">pizza</span> and <span className="font-bold text-[#54d5bb]">burgers</span>. After all, a coder's mind works best when well-fed!
+    Learning with us is not just about coding; it's an experience. We ensure our sessions are enjoyable by bringing in delectable treats like <span className="font-bold text-[#54d5bb]">pizza</span> and <span className="font-bold text-[#54d5bb]">burgers</span>. 
 </motion.p>
             
                 </div>

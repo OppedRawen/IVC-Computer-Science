@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -9,7 +9,30 @@ import { Link } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
 // import {MdOutlineDarkMode} from 'react-icons/md';
 // import {MdOutlineLightMode} from 'react-icons/md';
+// const handleScroll = () => {
+//     const [scrollDirection, setScrollDirection] = useState('up');
+  
+//     useEffect(() => {
+//       let lastScrollY = window.pageYOffset;
+  
+//       const updateScrollDirection = () => {
+//         const scrollY = window.pageYOffset;
+//         if (scrollY > lastScrollY) {
+//           setScrollDirection('down');
+//         } else {
+//           setScrollDirection('up');
+//         }
+//         lastScrollY = scrollY;
+//       };
+  
+//       window.addEventListener('scroll', updateScrollDirection);
+//       return () => window.removeEventListener('scroll', updateScrollDirection);
+//     }, []);
+  
+//     return scrollDirection;
+//   };
 const Navbar = ({ isDarkMode, toggleDarkMode }) => {
+    
     const [menuOpen, setMenuOpen] = useState(false);
     const [menuHeight, setMenuHeight] = useState(window.innerWidth > 768 ? 'auto' : '100vh');
 
@@ -24,6 +47,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
 //       }
 //       setMenuOpen(prev => !prev);
 //   };
+
 const toggleMenu = () => {
   if (!menuOpen && window.innerWidth <= 768) { 
       setMenuHeight(`${document.body.scrollHeight}px`);
@@ -41,7 +65,7 @@ const toggleMenu = () => {
 
 
     return (
-        <nav className="py-10 mb-12 flex justify-between text-[#cacaca]  z-20">
+        <nav className="py-10 mb-12 flex justify-between text-primary-light  z-20">
             <Link to="/" className="text-lg font-burtons font-semibold">
                 <HiOutlineDesktopComputer className="text-3xl font-bold w-10 h-10" />
             </Link>
@@ -50,7 +74,7 @@ const toggleMenu = () => {
                 <GiHamburgerMenu onClick={toggleMenu} className="cursor-pointer w-10 h-5" />
             </div>
             
-            <div className={` absolute top-0 right-0 w-64 bg-[#1d1d25] transform ${menuOpen ? 'translate-x-0 pt-10'  : 'translate-x-full'} transition-transform duration-300 ease-in-out md:static md:transform-none z-50`}  style={{minHeight:menuHeight}}>
+            <div className={` absolute top-0 right-0 w-64 bg-primary-light transform ${menuOpen ? 'translate-x-0 pt-10'  : 'translate-x-full'} transition-transform duration-300 ease-in-out md:static md:transform-none z-50`}  style={{minHeight:menuHeight}}>
                {/* Close Button */}
                <button 
                     className="md:hidden absolute top-2 right-2"

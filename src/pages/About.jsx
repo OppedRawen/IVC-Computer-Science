@@ -26,17 +26,17 @@ const About = () => {
 
         {/* Main Heading */}
         <motion.h1 
-          className='text-4xl sm:text-5xl py-2 text-[#cacaca] font-medium'
+          className='text-4xl sm:text-5xl py-2 text-primary-light font-medium'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.75 }}
         >
-          IVC CompSci Club
+          IVC Computer Science Club
         </motion.h1>
 
         {/* Typing Animation */}
         <motion.h3 
-          className="flex pt-4 text-[#8892b0] text-2xl sm:text-3xl"
+          className="flex pt-4 text-primary-light text-2xl sm:text-3xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -71,7 +71,7 @@ const About = () => {
 
         {/* About Description */}
         <motion.p 
-          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-[#cacaca]'
+          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-primary-light'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}

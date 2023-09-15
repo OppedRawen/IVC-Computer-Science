@@ -16,6 +16,9 @@
   a {
     @apply transition-all ease-in duration-300;
   }
+  h2 {
+    @apply pb-8 font-semibold text-2xl sm:text-3xl text-slate-400 text-center tracking-tighter;
+  }
 }
 .App {
   text-align: center;
