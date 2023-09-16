@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import {Navbar,Loading} from './components';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import {Contact,Resources,About,Introduction,Projects,ConceptIntroductions, GuestLectures,CodingChallenge,TeamProjects} from './pages';
+import NewHome from './pages/NewHome';
 
 
 function App() {
@@ -48,6 +49,7 @@ useEffect(() => {
            <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(prev => !prev)} />
            
             <Routes>
+              <Route path='/newhome' element={<NewHome />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/projects" element={<Projects />} />
               <Route path = "/activities" element={<Activities />} />
