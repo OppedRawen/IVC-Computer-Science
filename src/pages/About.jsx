@@ -71,7 +71,9 @@ const About = () => {
           transition={{ duration: 0.5, delay: 1.25 }}
         /> */}
 <Carousel
-  className="relative mx-auto w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden z-0"
+className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden z-0"
+
+
   showThumbs={false}
   showStatus={false}
   infiniteLoop={true}
@@ -80,23 +82,25 @@ const About = () => {
   transitionTime={500}
   stopOnHover={true}
 >
-<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="compsci2.png" alt="Image 1" />
+  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
+    <img src="compsci2.png" alt="Image 1" className="object-cover w-full h-full" />
   </motion.div>
   
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="ivccs1.jpg" alt="Image 2" className="w-64 h-64"/>
+    <img src="ivccs1.jpg" alt="Image 2" className="object-cover w-full h-full"/>
   </motion.div>
+  
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="template2.png" alt="Image 3" />
+    <img src="ivccs2.jpg" alt="Image 3" className="object-cover w-full h-full" />
   </motion.div>
+  
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="template3.png" alt="Image 4" />
+    <img src="ivccs3.jpg" alt="Image 4" className="object-cover w-full h-full" />
   </motion.div>
-  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="template4.png" alt="Image 5" />
-  </motion.div>
+  
 </Carousel>
+
+
         {/* About Description */}
         <motion.p 
           className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-p-light dark:text-p-dark'
