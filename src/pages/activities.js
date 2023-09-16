@@ -67,7 +67,7 @@ const Activities = () => {
                             <motion.div key={idx} className="relative group activity-card" variants={animateProjectItem}>
                                 <img src={activity.imgSrc} className="w-full h-60 rounded-md" alt={activity.title} />
                                 <h3 className="text-[#54d5bb] font-bold text-xl mt-4">{activity.title}</h3>
-                                <p className="text-[#cacaca] mt-2 text-[16px] leading-6">{activity.description}</p>
+                                <p className="text-p-light mt-2 text-[16px] leading-6">{activity.description}</p>
                                 <button onClick={() => navigateToActivity(activity.title)} className="mt-4 bg-[#54d5bb] text-white rounded px-4 py-2 transition duration-200 ease hover:bg-[#3fb89b]">Learn More</button>
                             </motion.div>
                         ))}

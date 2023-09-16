@@ -8,8 +8,8 @@ import {motion} from 'framer-motion';
 
 function Resources() {
     return (
-        <motion.div id="resources" className="flex flex-col items-center p-10 bg-[#1d1d20] overflow-y-auto h-full max-h-screen" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-            <h1 className="text-3xl font-bold text-[#cacaca] mb-10">Coding Resources</h1>
+        <motion.div id="resources" className="flex flex-col items-center p-10 bg-primary-light overflow-y-auto h-full max-h-screen" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+            <h1 className="text-3xl font-bold text-h1-light mb-10">Coding Resources</h1>
             <Tab />
         </motion.div>
     );
@@ -43,7 +43,7 @@ function Tab() {
     }, [location]);
 
     return (
-        <div className="w-full mt-6 text-[#cacaca]">
+        <div className="w-full mt-6 text-p-light">
             <div className="mb-4 space-x-4 grid grid-cols-1 md:space-x-0 md:grid md:grid-cols-3">
                 {buttonsList.map((tabButton, idx) => (
                     <button

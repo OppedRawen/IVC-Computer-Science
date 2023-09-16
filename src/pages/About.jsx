@@ -16,7 +16,7 @@ const About = () => {
       <div className="max-w-screen-md mx-auto">
         {/* Welcome Text */}
         <motion.h3 
-          className="text-[#54d5bb] text-xl sm:text-2xl"
+          className=" text-secondary-light text-xl sm:text-2xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -26,7 +26,7 @@ const About = () => {
 
         {/* Main Heading */}
         <motion.h1 
-          className='text-4xl sm:text-5xl py-2 text-primary-light font-medium'
+          className='text-4xl sm:text-5xl py-2 text-h1-light font-medium'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.75 }}
@@ -36,7 +36,7 @@ const About = () => {
 
         {/* Typing Animation */}
         <motion.h3 
-          className="flex pt-4 text-primary-light text-2xl sm:text-3xl"
+          className="flex pt-4 text-h3-light text-2xl sm:text-3xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -71,7 +71,7 @@ const About = () => {
 
         {/* About Description */}
         <motion.p 
-          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-primary-light'
+          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-p-light'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
