@@ -24,7 +24,7 @@ const Loading = () => {
                 <HiOutlineDesktopComputer className="  text-3xl font-bold w-20 h-20 " />
               </motion.div>
               <motion.div
-                className="mt-14 h-2 w-40 bg-primary-light rounded"
+                className="mt-14 h-2 w-40 bg-primary-dark rounded"
                 initial={{ width: 0 }}
                 animate={{ width: '50%' }}
                 transition={{ duration: 1 }}

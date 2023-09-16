@@ -7,8 +7,8 @@ import { HiOutlineDesktopComputer } from 'react-icons/hi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
-// import {MdOutlineDarkMode} from 'react-icons/md';
-// import {MdOutlineLightMode} from 'react-icons/md';
+import {MdOutlineDarkMode} from 'react-icons/md';
+import {MdOutlineLightMode} from 'react-icons/md';
 // const handleScroll = () => {
 //     const [scrollDirection, setScrollDirection] = useState('up');
   
@@ -115,11 +115,14 @@ const toggleMenu = () => {
                           <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
                         </motion.div>
                     </li>
-                    {/* <li>
-                    <button onClick={toggleDarkMode}  className="w-1/2 m-2 p-3 flex justify-center items-center text-slate-400 hover:text-gray-800 cursor-pointer">
-                    {isDarkMode ? <MdOutlineDarkMode className="" /> : <MdOutlineLightMode />}
-                  </button>
-                    </li> */}
+                    <li>
+  <button 
+    onClick={toggleDarkMode} 
+    className="w-1/2 m-2 p-3 flex justify-center items-center text-slate-400 hover:text-gray-800 cursor-pointer"
+  >
+    {isDarkMode ? <MdOutlineDarkMode  className="w-20 h-20"/> : <MdOutlineLightMode className="w-20 h-20" />}
+  </button>
+</li>
                    
                 </ul>
                 <div className=" ml-5 mt-12 md:hidden ">  {/* Push the social links to the bottom */}

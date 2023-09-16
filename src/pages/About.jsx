@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <motion.div className='flex flex-col justify-center p-4 md:p-10'>
-      <div className="max-w-screen-md mx-auto">
+      <div className="max-w-screen-lg mx-auto">
         {/* Welcome Text */}
         <motion.h3 
           className=" text-secondary-light text-xl sm:text-2xl"

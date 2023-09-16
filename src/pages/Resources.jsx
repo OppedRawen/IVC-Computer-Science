@@ -50,7 +50,7 @@ function Tab() {
                         key={idx + 1}
                         onClick={() => toggleTab(idx + 1)}
                         className={`py-1 px-2 md:py-2 md:px-4 text-sm md:text-lg border rounded-lg transition-colors duration-200 ease-in-out 
-                        ${tabState === idx + 1 ? 'bg-[#ff9617] text-[#212121]' : 'bg-[#2a2c2e] text-white'}`}
+                        ${tabState === idx + 1 ? 'bg-[#ff9617] text-[#212121]' : 'bg-[#2a2c2e] '}`}
                     >
                         {tabButton}
                     </button>

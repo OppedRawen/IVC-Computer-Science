@@ -12,11 +12,11 @@ const Activities = () => {
             opacity: 1, 
             y: 0,
             transition: {
-                delay: 0.75,
+                delay: 0.5,
                 duration: 0.4,
                 type: 'tween',
                 delayChildren: 0.5,
-                staggerChildren: 0.4
+                staggerChildren: 0.25
             }
         }
     };
