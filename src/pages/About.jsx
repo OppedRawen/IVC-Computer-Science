@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from "react-router-dom";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 const About = () => {
   const handleLinkClick = (e, sectionId) => {
     e.preventDefault();
@@ -16,7 +18,7 @@ const About = () => {
       <div className="max-w-screen-lg mx-auto">
         {/* Welcome Text */}
         <motion.h3 
-          className=" text-secondary-light text-xl sm:text-2xl"
+          className=" text-secondary-light dark:text-h3-dark text-xl sm:text-2xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -26,7 +28,7 @@ const About = () => {
 
         {/* Main Heading */}
         <motion.h1 
-          className='text-4xl sm:text-5xl py-2 text-h1-light font-medium'
+          className='text-4xl sm:text-5xl py-2 text-h1-light dark:text-h1-dark font-medium'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.75 }}
@@ -36,7 +38,7 @@ const About = () => {
 
         {/* Typing Animation */}
         <motion.h3 
-          className="flex pt-4 text-h3-light text-2xl sm:text-3xl"
+          className="flex pt-4 text-h3-light dark:text-h3-dark text-2xl sm:text-3xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -59,7 +61,7 @@ const About = () => {
           />
         </motion.h3>
 
-        {/* Image Display */}
+        {/* Image Display
         <motion.img
           className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden z-0"
           src="compsci2.png"
@@ -67,11 +69,37 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.25 }}
-        />
-
+        /> */}
+<Carousel
+  className="relative mx-auto w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden z-0"
+  showThumbs={false}
+  showStatus={false}
+  infiniteLoop={true}
+  autoPlay={true}
+  interval={4000}
+  transitionTime={500}
+  stopOnHover={true}
+>
+<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
+    <img src="compsci2.png" alt="Image 1" />
+  </motion.div>
+  
+  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
+    <img src="ivccs1.jpg" alt="Image 2" className="w-64 h-64"/>
+  </motion.div>
+  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
+    <img src="template2.png" alt="Image 3" />
+  </motion.div>
+  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
+    <img src="template3.png" alt="Image 4" />
+  </motion.div>
+  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
+    <img src="template4.png" alt="Image 5" />
+  </motion.div>
+</Carousel>
         {/* About Description */}
         <motion.p 
-          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-p-light'
+          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-p-light dark:text-p-dark'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}

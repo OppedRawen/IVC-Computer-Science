@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Introduction = () => {
     return (
-        <div id="about" className="max-w-screen-lg m-auto md:pl-20 px-8 py-24 sm:py-32 text-gray-400">
+        <div id="about" className="max-w-screen-lg m-auto md:pl-20 px-8 py-24 sm:py-32 text-p-light dark:text-p-dark">
             <motion.h2
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ const Introduction = () => {
                 <div className="md:w-1/2">
                   
                 <motion.p
-    className=" text-p-light  mt-4 text-[16px] leading-6"
+    className=" text-p-light dark:text-p-dark mt-4 text-[16px] leading-6"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4, delay: 0.1 }}
@@ -40,7 +40,7 @@ const Introduction = () => {
 </motion.p>
 
 <motion.p
-    className=" text-p-light mt-4 text-[16px] leading-6"
+    className=" text-p-light dark:text-p-dark mt-4 text-[16px] leading-6"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4, delay: 0.15 }}
@@ -50,7 +50,7 @@ const Introduction = () => {
 </motion.p>
 
 <motion.p
-    className="text-p-light mt-4 text-[16px] leading-6"
+    className="text-p-light dark:text-p-dark mt-4 text-[16px] leading-6"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4, delay: 0.2 }}

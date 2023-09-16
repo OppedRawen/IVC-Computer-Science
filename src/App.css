@@ -19,12 +19,18 @@
   h2 {
     @apply pb-8 font-semibold text-2xl sm:text-3xl text-slate-400 text-center tracking-tighter;
   }
+ 
 }
 .App {
   text-align: center;
+
+
 }
 nav{
   position: relative;
+ 
+    transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 .App-logo {
   height: 40vmin;
