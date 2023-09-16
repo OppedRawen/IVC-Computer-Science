@@ -51,8 +51,7 @@ const About = () => {
               2000,
               'Collaborative Projects',
               2000,
-              'Inspiring Innovation & Creativity',
-              2000
+              'A Community of Tech Enthusiasts',
             ]}
             wrapper="div"
             cursor={true}
@@ -71,8 +70,8 @@ const About = () => {
           transition={{ duration: 0.5, delay: 1.25 }}
         /> */}
 <Carousel
-className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden z-0"
-
+className=" shadow-xl relative mx-auto bg-gradient-to-b from-teal-500 rounded-lg w-80 h-64 mt-5 overflow-hidden z-0"
+      // style={{ height: "100%", width: "100%" }}
 
   showThumbs={false}
   showStatus={false}
@@ -83,19 +82,19 @@ className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-6
   stopOnHover={true}
 >
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="compsci2.png" alt="Image 1" className="object-cover w-full h-full" />
+    <img src="compsci2.png" alt="1" className="object-cover w-full h-full" />
   </motion.div>
   
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="ivccs1.jpg" alt="Image 2" className="object-cover w-full h-full"/>
+    <img src="ivccs1.jpg" alt="2" className="object-cover w-full h-full"/>
   </motion.div>
   
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="ivccs2.jpg" alt="Image 3" className="object-cover w-full h-full" />
+    <img src="ivccs2.jpg" alt="3" className="object-cover w-full h-full" />
   </motion.div>
   
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.25 }}>
-    <img src="ivccs3.jpg" alt="Image 4" className="object-cover w-full h-full" />
+    <img src="ivccs3.jpg" alt="4" className="object-cover w-full h-full" />
   </motion.div>
   
 </Carousel>
@@ -122,7 +121,7 @@ className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-6
       >
         <motion.a
           href="#activities"
-          className="text-2xl sm:text-3xl inline-block rounded-lg px-4 py-2 text-teal-500 border border-teal-500 bg-transparent"
+          className={`text-2xl sm:text-3xl inline-block px-4 py-2 rounded-lg text-p-light border border-slate-400 bg-transparent dark:text-teal-500 dark:border-teal-500`}
           whileTap={{ scale: 0.95 }}
       
         >
@@ -131,7 +130,9 @@ className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-6
 
         <motion.a
           href="#resources"
-          className="text-2xl sm:text-3xl inline-block px-4 py-2 rounded-lg text-teal-500 border border-teal-500 bg-transparent"
+          
+          className={`text-2xl sm:text-3xl inline-block px-4 py-2 rounded-lg text-p-light border border-slate-400 bg-transparent dark:text-teal-500 dark:border-teal-500`}
+
           whileTap={{ scale: 0.95 }}
           onClick={(e) => handleLinkClick(e, "contact")}
         >
