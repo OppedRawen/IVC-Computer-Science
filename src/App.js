@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import {Navbar,Loading} from './components';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import {Contact,Resources,About,Introduction,Projects,ConceptIntroductions, GuestLectures,CodingChallenge,TeamProjects} from './pages';
+import NewHome from './pages/NewHome';
 
 
 function App() {
@@ -36,7 +37,9 @@ useEffect(() => {
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode: () => setIsDarkMode(prev => !prev) }}>
     <Router>
+
    <div className={` pl-5 overflow-x-hidden shadow-lg bg-primary-light dark:bg-primary-dark `}>
+
 
 
 
@@ -48,6 +51,14 @@ useEffect(() => {
            <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(prev => !prev)} />
            
             <Routes>
+              <Route path='/newhome' element={ <>
+                  <About />
+                  <Introduction />
+                  {/* <Activities />
+                  <Projects />
+                  <Contact /> */}
+                  
+                </>} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/projects" element={<Projects />} />
               <Route path = "/activities" element={<Activities />} />
@@ -57,14 +68,7 @@ useEffect(() => {
               <Route path="/activities/coding-challenge-workshops" element={<CodingChallenge />} />
               <Route path="/activities/team-projects-workshops" element={<TeamProjects />} />
               <Route path="/" element={
-                <>
-                  <About />
-                  <Introduction />
-                  {/* <Activities />
-                  <Projects />
-                  <Contact /> */}
-                  
-                </>
+               <NewHome/>
               } />
             </Routes>
             <Footer />

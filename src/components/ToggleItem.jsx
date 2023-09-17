@@ -11,12 +11,14 @@ function ToggleItem({ id, title, description, url, tags, urlText = 'See more' })
             <button
                 type="button"
                 onClick={() => setShowDescription(prev => !prev)}
+
                 className={`block w-full text-left px-4 py-2 transition-colors ${showDescription ? 'bg-gray-400 text-p-light dark:text-p-dark' : 'bg-transparent text-p-light dark:text-p-dark'} hover:bg-orange-500 hover:text-gray-800`}
             >
                 {title}
             </button>
             <div className={`transition-all transform origin-top ${showDescription ? 'max-h-[50rem] opacity-100 mt-2' : 'max-h-0 opacity-0'} px-4`}>
                 <p className="text-p-light dark:text-p-dark mb-2">{description}</p>
+
                 <a
                     className="text-orange-500 hover:underline"
                     href={url}
