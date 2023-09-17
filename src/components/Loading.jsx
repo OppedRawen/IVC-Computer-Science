@@ -21,10 +21,10 @@ const Loading = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <HiOutlineDesktopComputer className="text-[#cacaca] text-3xl font-bold w-20 h-20 " />
+                <HiOutlineDesktopComputer className="  text-3xl font-bold w-20 h-20 " />
               </motion.div>
               <motion.div
-                className="mt-14 h-2 w-40 bg-gray-200 rounded"
+                className="mt-14 h-2 w-40 bg-primary-dark rounded"
                 initial={{ width: 0 }}
                 animate={{ width: '50%' }}
                 transition={{ duration: 1 }}
