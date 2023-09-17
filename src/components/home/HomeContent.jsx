@@ -7,7 +7,7 @@
 
 export default function HomeContent() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-primary-light dark:bg-primary-dark py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-4">
@@ -17,7 +17,7 @@ export default function HomeContent() {
                 src="compsi3.jpg"
                 alt=""
               />
-              <div className="absolute inset-0 bg-gray-900 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gray-900 dark:bg-gray-400 mix-blend-multiply" />
               <div
                 className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
                 aria-hidden="true"
@@ -66,11 +66,11 @@ export default function HomeContent() {
               <p className="text-base font-semibold leading-7 text-indigo-600">
                 About our club
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-h1-light dark:text-h1-dark sm:text-4xl">
                 On a mission to make computer science more accessible
               </h1>
               <div className="max-w-xl">
-                <p className="mt-6">
+                <p className="mt-6 text-p-light dark:text-p-dark">
                   Welcome to the Computer Science Club, where we dive deep into
                   the enchanting world of coding every Wednesday at 11am. Our
                   dedicated sessions rotate between topic introductions —
@@ -78,14 +78,14 @@ export default function HomeContent() {
                   to diverse frameworks — guest lectures from industry experts,
                   and engaging coding challenges.
                 </p>
-                <p className="mt-8">
+                <p className="mt-8 text-p-light dark:text-p-dark">
                   Hands-on experience is at the core of our club. We organize
                   two main team project events focusing on game development and
                   web development, offering members the chance to work on
                   substantial, long-term projects. The schedules for these
                   extensive projects will be announced in due course.
                 </p>
-                <p className="mt-8">
+                <p className="mt-8 text-p-light dark:text-p-dark">
                   Learning with us is not just about coding; it's an experience.
                   We ensure our sessions are enjoyable by bringing in delectable
                   treats like pizza and burgers. After all, a coder's mind works

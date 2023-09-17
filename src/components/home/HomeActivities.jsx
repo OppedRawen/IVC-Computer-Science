@@ -34,13 +34,13 @@ export default function HomeActivities() {
   };
 
   return (
-    <div id="activities" className="bg-white py-24 sm:py-32">
+    <div id="activities" className="bg-primary-light dark:bg-primary-dark py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-h2-light dark:text-h2-dark sm:text-4xl">
             Our activities
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
+          <p className="mt-2 text-lg leading-8 text-p-light dark:text-p-dark">
             Our mission is to get you involved, and our activities are a great way to start!
           </p>
         </div>
@@ -55,24 +55,24 @@ export default function HomeActivities() {
                 <img
                   src={activity.imgSrc}
                   alt=""
-                  className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                  className="aspect-[16/9] w-full rounded-2xl bg-secondary-light dark:bg-secondary-dark object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                 />
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               </div>
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
-                  <time dateTime={activity.datetime} className="text-gray-500">
+                  <time dateTime={activity.datetime} className="text-p-light dark:text-p-dark">
                     {activity.date}
                   </time>
                 </div>
                 <div className=" relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-h3-light dark:text-h3-dark group-hover:text-gray-600">
                     <a href={activity.href}>
                       <span className="absolute inset-0" />
                       {activity.title}
                     </a>
                   </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-p-light dark:text-p-dark">
                     {activity.description}
                   </p>
                 </div>
