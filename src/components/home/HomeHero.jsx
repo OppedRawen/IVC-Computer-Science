@@ -52,11 +52,11 @@ export default function HomeHero() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-h1-light dark:text-h1-dark sm:text-6xl">
                     IVC Computer Science Club
                   </h1>
                   <motion.h3
-                    className="flex pt-6 text-gray-700 text-2xl sm:text-3xl"
+                    className="flex pt-6 text-h3-light dark:text-h3-dark text-2xl sm:text-3xl"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1 }}
@@ -78,7 +78,7 @@ export default function HomeHero() {
                       style={{ fontSize: "1em" }}
                     />
                   </motion.h3>
-                  <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                  <p className="relative mt-6 text-lg leading-8 text-p-light dark:text-p-dark sm:max-w-md lg:max-w-none">
                     Welcome to IVC's Computer Science Club. We aim to foster a
                     community of technology enthusiasts, provide resources for
                     learning, and work on innovative projects together. Whether
