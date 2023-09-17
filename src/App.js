@@ -49,7 +49,14 @@ useEffect(() => {
            <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(prev => !prev)} />
            
             <Routes>
-              <Route path='/newhome' element={<NewHome />} />
+              <Route path='/newhome' element={ <>
+                  <About />
+                  <Introduction />
+                  {/* <Activities />
+                  <Projects />
+                  <Contact /> */}
+                  
+                </>} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/projects" element={<Projects />} />
               <Route path = "/activities" element={<Activities />} />
@@ -59,14 +66,7 @@ useEffect(() => {
               <Route path="/activities/coding-challenge-workshops" element={<CodingChallenge />} />
               <Route path="/activities/team-projects-workshops" element={<TeamProjects />} />
               <Route path="/" element={
-                <>
-                  <About />
-                  <Introduction />
-                  {/* <Activities />
-                  <Projects />
-                  <Contact /> */}
-                  
-                </>
+               <NewHome/>
               } />
             </Routes>
             <Footer />
