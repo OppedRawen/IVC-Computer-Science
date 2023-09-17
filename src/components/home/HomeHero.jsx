@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 export default function HomeHero() {
   return (
     <div className="bg-white">
@@ -98,7 +100,7 @@ export default function HomeHero() {
                     </a>
                   </div>
                 </div>
-                <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                <div className="mt-14 sm:flex justify-end gap-8 hidden  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <img
@@ -145,6 +147,51 @@ export default function HomeHero() {
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                   </div>
+                </div>
+                <div className="mt-14 sm:hidden justify-end gap-8 block !rounded-xl  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                  <Carousel className="!rounded-xl" >
+                    <div className="relative rounded-xl">
+                      <img
+                        src="/homeImages/1.jpg"
+                        alt=""
+                        className="aspect-[2/3] w-full rounded-xl  object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl  " />
+                    </div>
+                    <div className="relative rounded-xl">
+                      <img
+                        src="/homeImages/2.jpg"
+                        alt=""
+                        className="aspect-[2/3] w-full rounded-xl  object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl  " />
+                    </div>
+                    <div className="relative rounded-xl">
+                      <img
+                        src="/homeImages/3.jpg"
+                        alt=""
+                        className="aspect-[2/3] w-full rounded-xl  object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl  " />
+                    </div>
+                   
+                    <div className="relative rounded-xl">
+                      <img
+                        src="/homeImages/4.jpg"
+                        alt=""
+                        className="aspect-[2/3] w-full rounded-xl  object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl  " />
+                    </div>
+                    <div className="relative rounded-xl">
+                      <img
+                        src="/homeImages/5.jpg"
+                        alt=""
+                        className="aspect-[2/3] w-full rounded-xl  object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl  " />
+                    </div>
+                  </Carousel>
                 </div>
               </div>
             </div>
