@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 export default function HomeHero() {
   return (
-    <div className="bg-white">
+    <div className=" bg-primary-light dark:bg-primary-dark">
       <main>
         <div className="relative isolate">
           <svg
