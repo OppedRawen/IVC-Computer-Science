@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from "react-router-dom";
+
 const About = () => {
   const handleLinkClick = (e, sectionId) => {
     e.preventDefault();
@@ -13,10 +14,10 @@ const About = () => {
 
   return (
     <motion.div className='flex flex-col justify-center p-4 md:p-10'>
-      <div className="max-w-screen-md mx-auto">
+      <div className="max-w-screen-lg mx-auto">
         {/* Welcome Text */}
         <motion.h3 
-          className="text-[#54d5bb] text-xl sm:text-2xl"
+          className=" text-secondary-light dark:text-h3-dark text-xl sm:text-2xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -26,17 +27,17 @@ const About = () => {
 
         {/* Main Heading */}
         <motion.h1 
-          className='text-4xl sm:text-5xl py-2 text-[#cacaca] font-medium'
+          className='text-4xl sm:text-5xl py-2 text-h1-light dark:text-h1-dark font-medium'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.75 }}
         >
-          IVC CompSci Club
+          IVC Computer Science Club
         </motion.h1>
 
         {/* Typing Animation */}
         <motion.h3 
-          className="flex pt-4 text-[#8892b0] text-2xl sm:text-3xl"
+          className="flex pt-4 text-h3-light dark:text-h3-dark text-2xl sm:text-3xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -49,8 +50,7 @@ const About = () => {
               2000,
               'Collaborative Projects',
               2000,
-              'Inspiring Innovation & Creativity',
-              2000
+              'A Community of Tech Enthusiasts',
             ]}
             wrapper="div"
             cursor={true}
@@ -59,7 +59,6 @@ const About = () => {
           />
         </motion.h3>
 
-        {/* Image Display */}
         <motion.img
           className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 sm:w-80 sm:h-80 mt-5 overflow-hidden z-0"
           src="compsci2.png"
@@ -69,9 +68,11 @@ const About = () => {
           transition={{ duration: 0.5, delay: 1.25 }}
         />
 
+
+
         {/* About Description */}
         <motion.p 
-          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-[#cacaca]'
+          className='text-sm sm:text-lg py-5 leading-7 sm:leading-8 text-p-light dark:text-p-dark'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
@@ -90,7 +91,7 @@ const About = () => {
       >
         <motion.a
           href="#activities"
-          className="text-2xl sm:text-3xl inline-block rounded-lg px-4 py-2 text-teal-500 border border-teal-500 bg-transparent"
+          className={`text-2xl sm:text-3xl inline-block px-4 py-2 rounded-lg text-p-light border border-slate-400 bg-transparent dark:text-teal-500 dark:border-teal-500`}
           whileTap={{ scale: 0.95 }}
       
         >
@@ -99,7 +100,9 @@ const About = () => {
 
         <motion.a
           href="#resources"
-          className="text-2xl sm:text-3xl inline-block px-4 py-2 rounded-lg text-teal-500 border border-teal-500 bg-transparent"
+          
+          className={`text-2xl sm:text-3xl inline-block px-4 py-2 rounded-lg text-p-light border border-slate-400 bg-transparent dark:text-teal-500 dark:border-teal-500`}
+
           whileTap={{ scale: 0.95 }}
           onClick={(e) => handleLinkClick(e, "contact")}
         >

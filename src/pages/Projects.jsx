@@ -8,7 +8,7 @@ const Projects = () => {
         <h2>Projects</h2>
       </section>
       <section className=" max-w-screen-xl m-auto md:pl-20 px-8 py-24 sm:32">
-        <h1 className="text-[#cacaca]">
+        <h1 className="text-h1-light">
           To be added
         </h1>
       </section>
