@@ -17,7 +17,7 @@ export default function HomeContent() {
                 src="compsi3.jpg"
                 alt=""
               />
-              <div className="absolute inset-0 bg-gray-900 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gray-900 dark:bg-gray-400 mix-blend-multiply" />
               <div
                 className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
                 aria-hidden="true"
