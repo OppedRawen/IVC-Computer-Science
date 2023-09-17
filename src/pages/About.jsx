@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from "react-router-dom";
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+
 const About = () => {
   const handleLinkClick = (e, sectionId) => {
     e.preventDefault();
