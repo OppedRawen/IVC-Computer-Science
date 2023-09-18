@@ -1,11 +1,29 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import {Link} from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 export default function HomeHero() {
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        when: "beforeChildren",
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
   return (
-    <div className=" bg-primary-light dark:bg-primary-dark">
+    <div className="bg-primary-light dark:bg-primary-dark transition-all duration-800">
       <main>
         <div className="relative isolate">
           <svg
@@ -49,13 +67,19 @@ export default function HomeHero() {
               }}
             />
           </div>
-          <div className="overflow-hidden">
+          <motion.div 
+          className="overflow-hidden"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-60 lg:px-8 lg:pt-12">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-h1-light dark:text-h1-dark sm:text-6xl">
+                  <motion.h1 className="text-4xl font-bold tracking-tight text-h1-light dark:text-h1-dark sm:text-6xl"
+                  variants={childVariants}>
                     IVC Computer Science Club
-                  </h1>
+                  </motion.h1>
                   <motion.h3
                     className="flex pt-6 text-h3-light dark:text-h3-dark text-2xl sm:text-3xl"
                     initial={{ opacity: 0, y: 50 }}
@@ -79,14 +103,15 @@ export default function HomeHero() {
                       style={{ fontSize: "1em" }}
                     />
                   </motion.h3>
-                  <p className="relative mt-6 text-lg leading-8 text-p-light dark:text-p-dark sm:max-w-md lg:max-w-none">
+                  <motion.p className="relative mt-6 text-lg leading-8 text-p-light dark:text-p-dark sm:max-w-md lg:max-w-none"
+                   variants={childVariants}>
                     Welcome to IVC's Computer Science Club. We aim to foster a
                     community of technology enthusiasts, provide resources for
                     learning, and work on innovative projects together. Whether
                     you're a beginner or an expert, join us in our journey of
                     exploration and creation!
-                  </p>
-                  <div className="mt-10 flex items-center gap-x-6">
+                  </motion.p>
+                  <motion.div className="mt-10 flex items-center gap-x-6" variants={childVariants}> 
                     <a
                       href="#activities"
                       className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -104,12 +129,12 @@ export default function HomeHero() {
                     <Link to="/resources" className="text-sm font-semibold leading-6 text-p-light dark:text-p-dark hover:text-gray-600">
                       Resources <span aria-hidden="true">→</span>
                     </Link>
-                  </div>
+                  </motion.div>
                 </div>
                 <div className="mt-14 sm:flex justify-end gap-8 hidden  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
-                      <img
+                      <LazyLoadImage
                         src="/homeImages/1.jpg"
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -119,7 +144,7 @@ export default function HomeHero() {
                   </div>
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
-                      <img
+                      <LazyLoadImage
                         src="/homeImages/2.jpg"
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -127,7 +152,7 @@ export default function HomeHero() {
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                     <div className="relative">
-                      <img
+                      <LazyLoadImage
                         src="/homeImages/3.jpg"
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -137,7 +162,7 @@ export default function HomeHero() {
                   </div>
                   <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                     <div className="relative">
-                      <img
+                      <LazyLoadImage
                         src="/homeImages/4.jpg"
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -145,7 +170,7 @@ export default function HomeHero() {
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                     <div className="relative">
-                      <img
+                      <LazyLoadImage
                         src="/homeImages/5.jpg"
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
@@ -201,8 +226,9 @@ export default function HomeHero() {
                 </div>
               </div>
             </div>
+          </motion.div>
           </div>
-        </div>
+       
       </main>
     </div>
   );

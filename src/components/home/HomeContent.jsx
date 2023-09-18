@@ -71,8 +71,8 @@ export default function HomeContent() {
               </h1>
               <div className="max-w-xl">
                 <p className="mt-6 text-p-light dark:text-p-dark">
-                  Welcome to the Computer Science Club, where we dive deep into
-                  the enchanting world of coding every Wednesday at 11am. Our
+                At IVC Computer Science Club, we dive deep into
+                  the world of programming every Wednesday at 11am. Our
                   dedicated sessions rotate between topic introductions —
                   ranging from programming languages like Java, Python, and C++
                   to diverse frameworks — guest lectures from industry experts,
@@ -88,8 +88,7 @@ export default function HomeContent() {
                 <p className="mt-8 text-p-light dark:text-p-dark">
                   Learning with us is not just about coding; it's an experience.
                   We ensure our sessions are enjoyable by bringing in delectable
-                  treats like pizza and burgers. After all, a coder's mind works
-                  best when well-fed!
+                  treats like pizza and burgers. 
                 </p>
               </div>
             </div>
