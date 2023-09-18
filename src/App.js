@@ -38,7 +38,7 @@ useEffect(() => {
     <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode: () => setIsDarkMode(prev => !prev) }}>
     <Router>
 
-   <div className={` pl-5 overflow-x-hidden shadow-lg bg-primary-light dark:bg-primary-dark `}>
+   <div className={`  overflow-x-hidden shadow-lg bg-primary-light dark:bg-primary-dark `}>
 
 
 

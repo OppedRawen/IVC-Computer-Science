@@ -10,7 +10,7 @@ const SocialLinks = ({ layout }) => {
   const itemClasses = layout === 'horizontal' ? 'mb-0' : 'mb-1';
 
   return (
-    <div className={`flex ${containerClasses}`}>
+    <div className={`flex pl-5 ${containerClasses}`}>
         <motion.div className={itemClasses} initial={{ opacity: 0, x: -70 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: .75 }}>
           <a href="https://github.com/" target="_blank" rel="noreferrer"><AiFillGithub size={30} className="text-primary-light dark:text-primary-dark" /></a>
         </motion.div>
