@@ -81,7 +81,7 @@ export default function HomeActivities() {
           ))}
           <div className="-mt-10 flex">
               <Link
-                href="/activities"
+              to={"/activities"}
                 className="text-base font-semibold leading-7 text-indigo-600"
               >
                 See all our activities{" "}
