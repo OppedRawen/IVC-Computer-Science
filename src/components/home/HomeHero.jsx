@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import {Link} from 'react-router-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 export default function HomeHero() {
@@ -92,14 +93,17 @@ export default function HomeHero() {
                     >
                       Activities
                     </a>
-                    <a
+                    {/* <a
                       href="/resources"
 
                       className="text-sm font-semibold leading-6 text-p-light dark:text-p-dark hover:text-gray-600"
 
                     >
                       Resources <span aria-hidden="true">→</span>
-                    </a>
+                    </a> */}
+                    <Link to="/resources" className="text-sm font-semibold leading-6 text-p-light dark:text-p-dark hover:text-gray-600">
+                      Resources <span aria-hidden="true">→</span>
+                    </Link>
                   </div>
                 </div>
                 <div className="mt-14 sm:flex justify-end gap-8 hidden  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
