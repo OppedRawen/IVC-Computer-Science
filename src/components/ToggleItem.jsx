@@ -16,7 +16,7 @@ function ToggleItem({ id, title, description, url, tags, urlText = 'See more' })
             >
                 {title}
             </button>
-            <div className={`transition-all transform origin-top ${showDescription ? 'max-h-[50rem] opacity-100 mt-2' : 'max-h-0 opacity-0'} px-4`}>
+            <div className={`transition-all transform origin-top ${showDescription ? 'max-h-full opacity-100  mt-2 ' : 'max-h-0 invisible opacity-0 '} px-4`}>
                 <p className="text-p-light dark:text-p-dark mb-2">{description}</p>
 
                 <a
