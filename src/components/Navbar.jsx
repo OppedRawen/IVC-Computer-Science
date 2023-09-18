@@ -11,7 +11,8 @@ import {MdOutlineDarkMode} from 'react-icons/md';
 import {MdOutlineLightMode} from 'react-icons/md';
 const useScrollDirection = () => {
     const [scrollDirection, setScrollDirection] = useState('up');
-  
+   
+
     useEffect(() => {
       let lastScrollY = window.pageYOffset;
   
@@ -24,6 +25,7 @@ const useScrollDirection = () => {
         }
         lastScrollY = scrollY;
       };
+   
   
       window.addEventListener('scroll', updateScrollDirection);
       return () => window.removeEventListener('scroll', updateScrollDirection);
@@ -37,18 +39,15 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [menuHeight, setMenuHeight] = useState(window.innerWidth > 768 ? 'auto' : '100vh');
     const scrollDirection = useScrollDirection();
-    //     const toggleMenu = () => {
-//       if (!menuOpen && window.innerWidth <= 768) { 
-//           setMenuHeight(`${document.body.scrollHeight}px`);
-//           document.body.style.overflow = 'hidden';
-//       } else if (window.innerWidth <= 768) {
-//           setMenuHeight('100vh');
-//       } else {
-//           setMenuHeight('auto');
-//       }
-//       setMenuOpen(prev => !prev);
-//   };
-
+    const [scrollYPosition, setScrollYPosition] = useState(0);
+    useEffect(() => {
+      const updateScrollYPosition = () => {
+          setScrollYPosition(window.pageYOffset);
+      };
+  
+      window.addEventListener('scroll', updateScrollYPosition);
+      return () => window.removeEventListener('scroll', updateScrollYPosition);
+  }, []);
 const toggleMenu = () => {
   if (!menuOpen && window.innerWidth <= 768) { 
       setMenuHeight(`${document.body.scrollHeight}px`);
@@ -66,7 +65,7 @@ const toggleMenu = () => {
 
 
     return (
-       <nav style={{ top: scrollDirection === 'down' ? '-100px' : '0', transition: 'top 0.3s' }} className="mb-12 flex justify-between text-primary-light dark:text-primary-dark z-20">
+      <nav style={{ top: (scrollDirection === 'down' && scrollYPosition > 0) ? '-100px' : '0', transition: 'top 0.3s' }} className="mb-12 flex justify-between text-primary-light dark:text-primary-dark z-20">
 
 
             <Link to="/" className="text-lg font-burtons font-semibold">
