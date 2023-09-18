@@ -44,12 +44,12 @@ function Tab() {
 
     return (
         <div className="w-full md:w-4/5 mt-6 text-p-light dark:text-p-dark">
-            <div className="mb-4 space-x-4 grid grid-cols-1 md:space-x-0 md:grid md:grid-cols-3">
+            <div className="mb-4 gap-x-4 grid grid-cols-1 md:space-x-0 md:grid md:grid-cols-3">
                 {buttonsList.map((tabButton, idx) => (
                     <button
                         key={idx + 1}
                         onClick={() => toggleTab(idx + 1)}
-                        className={`py-1 px-2 md:py-2 md:px-4 text-sm md:text-lg border rounded-lg transition-colors duration-200 ease-in-out 
+                        className={`py-1 px-2 md:py-2 whitespace-nowrap md:px-4 text-sm md:text-lg border rounded-lg transition-colors duration-200 ease-in-out 
                         ${tabState === idx + 1 ? 'bg-[#ff9617] text-[#212121]' : 'bg-[#2a2c2e] text-p-dark '}`}
                     >
                         {tabButton}
