@@ -43,7 +43,7 @@ function Tab() {
     }, [location]);
 
     return (
-        <div className="w-full mt-6 text-p-light dark:text-p-dark">
+        <div className="w-full md:w-4/5 mt-6 text-p-light dark:text-p-dark">
             <div className="mb-4 space-x-4 grid grid-cols-1 md:space-x-0 md:grid md:grid-cols-3">
                 {buttonsList.map((tabButton, idx) => (
                     <button
