@@ -65,7 +65,7 @@ const toggleMenu = () => {
 
 
     return (
-      <nav style={{ top: (scrollDirection === 'down' && scrollYPosition > 0) ? '-100px' : '0', transition: 'top 0.3s' }} className="mb-12 flex justify-between text-primary-light dark:text-primary-dark z-20">
+      <nav style={{ top: (scrollDirection === 'down' && scrollYPosition > 0) ? '-100px' : '0', transition: 'top 0.3s' }} className="mb-12 flex transition-all duration-800 justify-between text-primary-light dark:text-primary-dark z-20">
 
 
             <Link to="/" className="text-lg pl-5 font-burtons font-semibold">
