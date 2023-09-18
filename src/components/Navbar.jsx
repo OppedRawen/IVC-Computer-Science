@@ -65,6 +65,10 @@ const toggleMenu = () => {
 
 
     return (
+      <>
+       <div className="hidden xl:flex fixed top-[50%] z-10">
+         <SocialLinks layout="vertical"/>
+      </div>
       <nav style={{ top: (scrollDirection === 'down' && scrollYPosition > 0) ? '-100px' : '0', transition: 'top 0.3s' }} className="mb-12 flex transition-all duration-800 justify-between text-primary-light dark:text-primary-dark z-20">
 
 
@@ -127,11 +131,12 @@ const toggleMenu = () => {
 </li>
                    
                 </ul>
-                <div className=" ml-5 mt-12 md:hidden ">  {/* Push the social links to the bottom */}
-                <SocialLinks layout="horizontal"/>
-            </div>
+                <div className="ml-5 mt-12 md:hidden xl:hidden">
+            <SocialLinks layout="horizontal"/>
+         </div>
             </div>
         </nav>
+        </>
     );
 };
 
