@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -80,13 +80,13 @@ export default function HomeActivities() {
             </article>
           ))}
           <div className="-mt-10 flex">
-              <a
+              <Link
                 href="/activities"
                 className="text-base font-semibold leading-7 text-indigo-600"
               >
                 See all our activities{" "}
                 <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
         </div>
       </div>
