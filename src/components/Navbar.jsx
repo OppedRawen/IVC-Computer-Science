@@ -69,7 +69,7 @@ const toggleMenu = () => {
        <nav style={{ top: scrollDirection === 'down' ? '-100px' : '0', transition: 'top 0.3s' }} className="mb-12 flex justify-between text-primary-light dark:text-primary-dark z-20">
 
 
-            <Link to="/" className="text-lg font-burtons font-semibold">
+            <Link to="/" className="text-lg pl-5 font-burtons font-semibold">
                 <HiOutlineDesktopComputer className=" mt-10 text-3xl font-bold w-10 h-10 md:mt-10 sm:mt-5" />
             </Link>
 

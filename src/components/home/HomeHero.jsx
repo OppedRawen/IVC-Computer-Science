@@ -94,7 +94,7 @@ export default function HomeHero() {
                     </a>
                     <a
                       href="/resources"
-                      className="text-sm font-semibold leading-6 text-gray-900"
+                      className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
                     >
                       Resources <span aria-hidden="true">→</span>
                     </a>
