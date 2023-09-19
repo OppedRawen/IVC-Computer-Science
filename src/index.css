@@ -28,3 +28,12 @@ border-radius:  0.75rem !important
 .carousel-slider {
   border-radius:  0.75rem !important
 }
+
+.thumb {
+ border: none !important;
+ border-radius: 1rem;
+}
+
+.thumb.selected {
+  border: 0.15rem solid  #000  !important;
+}
