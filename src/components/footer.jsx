@@ -1,5 +1,5 @@
 import React from "react";
-import SocialLinks from './SocialLinks';
+
 
 const Footer = ()=>{
 
@@ -11,9 +11,9 @@ const Footer = ()=>{
         </div>
 
 
-        <div className="social hidden md:flex fixed top-[50%] z-10">
-            <SocialLinks layout="vertical" />
-      </div>
+        {/* <div className="social hidden md:flex fixed top-[50%] z-10">
+            <inks layout="vertical" />
+      </div> */}
     </footer>
     )
     }
