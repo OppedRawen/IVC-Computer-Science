@@ -41,14 +41,19 @@ const Events = () => {
 const renderEvents = (events) => {
   return events.length ? (
     events.map(event => (
-      <div key={event.id} className="event mb-8 bg-gray-100 p-6 rounded-md shadow-lg">
-          <h3 className="text-xl font-bold mb-4">{event.title}</h3>
+      <div key={event.id} className="event mb-8 bg-gray-100 p-6 rounded-md shadow-lg flex">
+        <div className="flex-1 mr-6">
+        <h3 className="text-xl font-bold mb-4">{event.title}</h3>
           <p className="mb-2"><strong>Description:</strong> {event.description}</p>
           <p className="mb-2"><strong>Location:</strong> {event.location}</p>
           <p className="mb-2"><strong>Date:</strong> {event.date}</p>
           <p className="mb-2"><strong>Time:</strong> {event.time}</p>
           <a href={event.slideLink} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800">View Slides</a>
-          <img src={event.imageUrl} className="mb-4 w-full h-auto rounded" alt={event.title} />
+        </div>
+         <div>
+         <img src={event.imageUrl} className="mb-4 w-80 h-60 rounded" alt={event.title} />
+         </div>
+        
       </div>
   ))
 ) : (

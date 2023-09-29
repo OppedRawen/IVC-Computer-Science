@@ -316,7 +316,7 @@ export const eventsMap = [
         "date": "10/5/2023",
         "time": "5:00 PM - 7:00 PM",
         "slideLink": "https://example.com/slide2",
-		"imageUrl": "https://res.cloudinary.com/dk5mamh4v/image/upload/event1.jpg",
+		"imageUrl": "https://res.cloudinary.com/dk5mamh4v/image/upload/kxafu7lpxutzyfsmbwsj",
         "pastEvent": false
     }
  
