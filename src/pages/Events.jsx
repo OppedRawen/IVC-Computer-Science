@@ -2,9 +2,16 @@ import React,{useState,useEffect} from "react";
 import { eventsMap } from "../components/fakeData";
 const Events = () => {
   const [events, setEvents] = useState([]);
+  const [pastEvents,setPastEvents] = useState([]);
+  const [upcomingEvents,setUpcomingEvents] = useState([]);
 
   useEffect(() => {
-      setEvents(eventsMap);
+      const currentDate = new Date();
+      const past = [];
+      const upcoming = [];
+
+      eventsMap.sort((a,b)=>new Date(b.date)- new Date(a.date));
+      
   }, []);
     return(
       <>
