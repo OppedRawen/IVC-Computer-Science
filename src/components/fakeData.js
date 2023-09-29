@@ -295,17 +295,27 @@ export const organizationsMap = [
 		tags: ["hackathon"],
 	},
 ];
-export const projectsMap = [
-{
-	id:1,
-	title:"McDonaldsorKFCquiz",
-	description:"A quiz to determine if you are a McDonalds or KFC person",
-
-},
-{
-	id:2,
-	title:"personality-quiz",
-	description:"A quiz to determine your personality",
-	
-}
-];
+// would use database in the future
+export const eventsMap = [
+    {
+        "id": 1,
+        "title": "General Meeting #1",
+        "description": "Our first general meeting of the year where we discuss the club's vision and upcoming activities.",
+        "location": "BSTIC 117",
+        "date": "9/20/2023",
+        "time": "11:00 AM - 12:00 PM",
+        "slideLink": "https://example.com/slide1",
+        "pastEvent": true
+    },
+    {
+        "id": 2,
+        "title": "Web Development Workshop",
+        "description": "Introductory workshop to web development, covering HTML & CSS basics.",
+        "location": "TBD",
+        "date": "10/5/2023",
+        "time": "5:00 PM - 7:00 PM",
+        "slideLink": "https://example.com/slide2",
+        "pastEvent": false
+    }
+ 
+]
