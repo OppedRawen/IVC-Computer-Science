@@ -12,7 +12,7 @@ function ToggleItem({ id, title, description, url, tags, urlText = 'See more' })
                 type="button"
                 onClick={() => setShowDescription(prev => !prev)}
 
-                className={`block w-full text-left px-4 py-2 transition-colors ${showDescription ? 'bg-gray-400 text-p-light dark:text-p-dark' : 'bg-transparent text-p-light dark:text-p-dark'} hover:bg-orange-500 hover:text-gray-800`}
+                className={`block w-full rounded-md text-left px-4 py-2 transition-colors ${showDescription ? 'bg-gray-200 dark:bg-[#141414] text-p-light dark:text-p-dark' : 'bg-transparent text-p-light dark:text-p-dark'} hover:underline hover:text-gray-800`}
             >
                 {title}
             </button>

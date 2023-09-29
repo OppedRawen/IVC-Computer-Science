@@ -114,11 +114,11 @@ const toggleMenu = () => {
                     </li>
                     <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
                         <motion.div
-                            href="#projects"
+                            href="#events"
                             whileTap={{ scale: 0.95 }}
                       
                         >
-                          <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+                          <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
                         </motion.div>
                     </li>
                     <li>
