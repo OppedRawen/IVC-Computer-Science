@@ -35,8 +35,8 @@ const Events = () => {
           onClick={() => setEventsShowing("upcoming")}
           className={`${
             eventsShowing === "upcoming"
-              ? `text-black text-3xl font-extrabold`
-              : `text-gray-500 text-3xl hover:underline underline-offset-8`
+              ? `text-black text-3xl font-extrabold dark:text-white`
+              : `text-gray-500 dark:text-gray-400 text-3xl hover:underline underline-offset-8`
           }`}
         >
           Upcoming Events
@@ -46,8 +46,8 @@ const Events = () => {
           onClick={() => setEventsShowing("past")}
           className={`${
             eventsShowing === "past"
-              ? `text-black text-3xl font-extrabold`
-              : `text-gray-500 text-3xl hover:underline underline-offset-8`
+              ? `text-black text-3xl font-extrabold dark:text-white`
+              : `text-gray-500 dark:text-gray-400 text-3xl hover:underline underline-offset-8`
           }`}
         >
           Past Events
@@ -72,27 +72,27 @@ const renderEvents = (events) => {
     events.map((event) => (
       <div
         key={event.id}
-        className="event mb-8 bg-gray-100 p-6 rounded-lg shadow-md flex"
+        className="event mb-8 bg-gray-100 dark:bg-primary-dark p-6 rounded-lg shadow-md flex"
       >
         <div className="flex-1 mr-6">
-          <h3 className="text-xl font-bold mb-4">{event.title}</h3>
-          <p className="mb-2">
+          <h3 className="text-xl font-bold mb-4 dark:text-white">{event.title}</h3>
+          <p className="mb-2 dark:text-gray-200">
             <strong>Description:</strong> {event.description}
           </p>
-          <p className="mb-2">
+          <p className="mb-2 dark:text-gray-200">
             <strong>Location:</strong> {event.location}
           </p>
-          <p className="mb-2">
+          <p className="mb-2 dark:text-gray-200">
             <strong>Date:</strong> {event.date}
           </p>
-          <p className="mb-2">
+          <p className="mb-2 dark:text-gray-200">
             <strong>Time:</strong> {event.time}
           </p>
           <a
             href={event.slideLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-indigo-600 hover:text-indigo-800"
+            className="text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-600"
           >
             View Slides
           </a>
