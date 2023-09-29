@@ -28,7 +28,7 @@ const Events = () => {
           <h2>Events</h2>
       </section>
       
-      <section className="max-w-screen-xl m-auto md:pl-20 px-8 py-24">
+      <section className="max-w-screen-xl m-auto md:pl-20 px-8 py-14">
           <h2 className="text-2xl mb-6 font-semibold">Upcoming Events</h2>
           {renderEvents(upcomingEvents)}
           
@@ -48,6 +48,7 @@ const renderEvents = (events) => {
           <p className="mb-2"><strong>Date:</strong> {event.date}</p>
           <p className="mb-2"><strong>Time:</strong> {event.time}</p>
           <a href={event.slideLink} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800">View Slides</a>
+          <img src={event.imageUrl} className="mb-4 w-full h-auto rounded" alt={event.title} />
       </div>
   ))
 ) : (
