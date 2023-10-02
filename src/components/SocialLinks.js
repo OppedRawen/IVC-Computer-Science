@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import {motion} from "framer-motion";
-import { AiFillGithub,AiFillLinkedin,AiOutlineMail,AiFillInstagram} from "react-icons/ai"
+import {AiFillLinkedin,AiOutlineMail,AiFillInstagram} from "react-icons/ai"
 import {BsDiscord} from "react-icons/bs"
 const SocialLinks = ({ layout }) => {
 
