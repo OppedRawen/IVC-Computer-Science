@@ -308,16 +308,28 @@ export const eventsMap = [
 		"imageUrl": "https://res.cloudinary.com/dk5mamh4v/image/upload/tqi2uvwk6238vaza0cmc",
         "pastEvent": true
     },
-    {
+	{
         "id": 2,
+        "title": "Intro to Programming",
+        "description": "Introduction to the basic of programming with C++",
+        "location": "BSTIC 212",
+        "date": "10/4/2023",
+        "time": "11:00 AM - 12:00 PM",
+        "slideLink": "https://www.canva.com/design/DAFveWg__lQ/neKMVByhpkd4y8A3XIDebg/edit?utm_content=DAFveWg__lQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+		"imageUrl": "https://res.cloudinary.com/dk5mamh4v/image/upload/ppg3luxssg2nv5wiahkq",
+        "pastEvent": false
+    },
+    {
+        "id": 3,
         "title": "Web Development Workshop",
         "description": "Introductory workshop to web development, covering HTML & CSS basics.",
-        "location": "TBD",
+        "location": "BSTIC 117",
         "date": "10/5/2023",
         "time": "5:00 PM - 7:00 PM",
         "slideLink": "https://example.com/slide2",
 		"imageUrl": "https://res.cloudinary.com/dk5mamh4v/image/upload/kxafu7lpxutzyfsmbwsj",
         "pastEvent": false
-    }
+    },
+	
  
 ]
