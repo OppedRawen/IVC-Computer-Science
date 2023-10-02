@@ -10,7 +10,6 @@ const Events = () => {
     const past = [];
     const upcoming = [];
 
-    eventsMap.sort((a, b) => new Date(b.date) - new Date(a.date));
     eventsMap.forEach((event) => {
       if (new Date(event.date) < currentDate) {
         past.push(event);
@@ -18,6 +17,13 @@ const Events = () => {
         upcoming.push(event);
       }
     });
+
+    // Sorting past events in descending order
+    past.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Sorting upcoming events in ascending order
+    upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
+
     setPastEvents(past);
     setUpcomingEvents(upcoming);
   }, []);
