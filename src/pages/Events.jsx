@@ -3,7 +3,7 @@ import { eventsMap } from "../components/fakeData";
 const Events = () => {
   const [pastEvents, setPastEvents] = useState([]);
   const [upcomingEvents, setUpcomingEvents] = useState([]);
-  const [eventsShowing, setEventsShowing] = useState("upcoming");
+  const [eventsShowing, setEventsShowing] = useState("past");
 
   useEffect(() => {
     const currentDate = new Date();
@@ -36,7 +36,7 @@ const Events = () => {
         {/* <h2>Events</h2> */}
       </section>
       <div className="flex gap-x-6 items-center justify-center">
-        <button
+        {/* <button
           disabled={eventsShowing === "upcoming"}
           onClick={() => setEventsShowing("upcoming")}
           className={`${
@@ -46,7 +46,7 @@ const Events = () => {
           }`}
         >
           Upcoming Events
-        </button>
+        </button> */}
         <button
           disabled={eventsShowing === "past"}
           onClick={() => setEventsShowing("past")}
@@ -58,12 +58,23 @@ const Events = () => {
         >
           Past Events
         </button>
+        <button
+          disabled={eventsShowing === "upcoming"}
+          onClick={() => setEventsShowing("upcoming")}
+          className={`${
+            eventsShowing === "upcoming"
+              ? `text-black text-3xl font-extrabold dark:text-white`
+              : `text-gray-500 dark:text-gray-400 text-3xl hover:underline underline-offset-8`
+          }`}
+        >
+          Upcoming Events
+        </button>
       </div>
 
       <section className="max-w-screen-xl m-auto md:pl-20 px-8 py-14">
-        {eventsShowing === "upcoming"
-          ? renderEvents(upcomingEvents)
-          : renderEvents(pastEvents)}
+        {eventsShowing === "past"
+          ? renderEvents(pastEvents)
+          : renderEvents(upcomingEvents)}
         {/* <h2 className="text-2xl mb-6 font-semibold">Upcoming Events</h2> */}
         {/* {renderEvents(upcomingEvents)} */}
 

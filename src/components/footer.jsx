@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ContributorModal from "./ContributorsModal";
-
+import SocialLinks from "./SocialLinks";
 
 const Footer = ()=>{
 
@@ -13,11 +13,12 @@ const Footer = ()=>{
             <p onClick={()=>setOpen(true)} className="underline underline-offset-4 cursor-pointer">View all contributors</p>
             <p>&copy; {new Date().getFullYear()}. All rights reserved</p>
         </div>
+        <div className="flex flex-row justify-center items-center mt-4">
+            <p>Follow Us Here !: </p>
+          <SocialLinks layout="horizontal"/>
+            </div>
 
-
-        {/* <div className="social hidden md:flex fixed top-[50%] z-10">
-            <inks layout="vertical" />
-      </div> */}
+       
     </footer>
     )
     }

@@ -6,14 +6,14 @@ import './App.css';
 
 import Activities from './pages/activities';
 import Footer from "./components/footer";
-import {Navbar,Loading} from './components';
+import {Navbar} from './components';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import {Contact,Resources,About,Introduction,Events,ConceptIntroductions, GuestLectures,CodingChallenge,TeamProjects} from './pages';
 import NewHome from './pages/NewHome';
 
 
 function App() {
-const [isLoading,setIsLoading]=useState(true);
+
 const [isDarkMode, setIsDarkMode] = useState(false);
 useEffect(() => {
   if (isDarkMode) {
@@ -22,18 +22,7 @@ useEffect(() => {
     document.documentElement.classList.remove('dark');
   }
 }, [isDarkMode]);
-useEffect(() => {
-  
-  // Simulating a 1-second delay before loading the main page
-  const timer = setTimeout(() => {
-    setIsLoading(false);
-  }, 1500);
 
-  return () =>{
-    document.body.style.overflow = "auto";
-    clearTimeout(timer);
-  } // Clear the timer when the component is unmounted
-}, []);
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode: () => setIsDarkMode(prev => !prev) }}>
     <Router>
@@ -43,9 +32,7 @@ useEffect(() => {
 
 
 
-        {isLoading ? (
-          <Loading />
-        ) : (
+      
           <>
            
            <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(prev => !prev)} />
@@ -73,7 +60,7 @@ useEffect(() => {
             </Routes>
             <Footer />
           </>
-        )}
+    
       </div>
     </Router>
     </ThemeContext.Provider>
