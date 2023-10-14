@@ -88,11 +88,9 @@ export default function HomeHero() {
                   >
                     <TypeAnimation
                       sequence={[
-                        "A Space for Creative Ideas",
+                        "Learn Programming Concepts",
                         2000,
-                        "Engaging Activities",
-                        2000,
-                        "Collaborative Projects",
+                        "Collaborate on Projects",
                         2000,
                         "A Community of Tech Enthusiasts",
                         2000,
