@@ -9,10 +9,14 @@ import { Link } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
 import {MdOutlineDarkMode} from 'react-icons/md';
 import {MdOutlineLightMode} from 'react-icons/md';
+
+import { onAuthStateChanged } from "@firebase/auth";
+import { getDoc, doc } from "@firebase/firestore";
+import { auth, db } from "../utils/firebaseConfig";
 const useScrollDirection = () => {
     const [scrollDirection, setScrollDirection] = useState('up');
    
-
+   
     useEffect(() => {
       let lastScrollY = window.pageYOffset;
   
@@ -40,6 +44,27 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
     const [menuHeight, setMenuHeight] = useState(window.innerWidth > 768 ? 'auto' : '100vh');
     const scrollDirection = useScrollDirection();
     const [scrollYPosition, setScrollYPosition] = useState(0);
+    
+
+    const [user, setUser] = useState(null);
+    const [profileImageUrl, setProfileImageUrl] = useState(null);
+    const [showDropdown, setShowDropdown] = useState(false);
+    
+    useEffect(() => {
+      const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+          if (currentUser) {
+              setUser(currentUser);
+              const userDoc = doc(db, "users", currentUser.uid);
+              const userData = await getDoc(userDoc);
+              setProfileImageUrl(userData.data().profileImage);
+          } else {
+              setUser(null);
+              setProfileImageUrl(null);
+          }
+      });
+    
+      return () => unsubscribe();
+    }, []);
     useEffect(() => {
       const updateScrollYPosition = () => {
           setScrollYPosition(window.pageYOffset);
@@ -125,7 +150,7 @@ const toggleMenu = () => {
                           
                         </motion.div>
                     </li>
-                    <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
+                    {/* <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
                         <motion.div
                             href="#register"
                             whileTap={{ scale: 0.95 }}
@@ -135,7 +160,39 @@ const toggleMenu = () => {
 
                           
                         </motion.div>
-                    </li>
+                    </li> */}
+
+
+
+{
+    user ? (
+        <li className="relative">
+            <img 
+                src={profileImageUrl || "path_to_default_image.jpg"} 
+                alt="User Profile" 
+                className="rounded-full w-8 h-8 cursor-pointer"
+                onClick={() => setShowDropdown(!showDropdown)}
+            />
+            {showDropdown && (
+                <div className="absolute top-10 right-0 bg-white dark:bg-black p-2 rounded shadow-lg">
+                    <Link to="/userprofile" onClick={() => setShowDropdown(false)}>UserProfile</Link>
+                    <button onClick={() => {
+                        auth.signOut(); // Sign out the user
+                        setShowDropdown(false);
+                    }}>
+                        Logout
+                    </button>
+                </div>
+            )}
+        </li>
+    ) : (
+        <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
+            <motion.div whileTap={{ scale: 0.95 }}>
+                <Link to="/register" onClick={() => setMenuOpen(false)}>Sign Up</Link>
+            </motion.div>
+        </li>
+    )
+}
                     <li>
   <button 
     onClick={toggleDarkMode} 
