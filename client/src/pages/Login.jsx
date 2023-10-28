@@ -8,6 +8,7 @@ function LoginPage() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
 
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -52,6 +53,8 @@ function LoginPage() {
             </Link>
             
           </div>
+          {/* display user and indicate loggedIn */}
+    
         </form>
       </div>
 
