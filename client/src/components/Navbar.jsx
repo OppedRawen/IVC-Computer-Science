@@ -125,6 +125,17 @@ const toggleMenu = () => {
                           
                         </motion.div>
                     </li>
+                    <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
+                        <motion.div
+                            href="#register"
+                            whileTap={{ scale: 0.95 }}
+                      
+                        >
+                          <Link to="/register" onClick={() => setMenuOpen(false)}>Sign Up</Link>
+
+                          
+                        </motion.div>
+                    </li>
                     <li>
   <button 
     onClick={toggleDarkMode} 

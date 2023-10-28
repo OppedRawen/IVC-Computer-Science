@@ -8,7 +8,8 @@ import ConceptIntroductions from './ConceptIntroductions';
 import GuestLectures from './GuestLectures';
 import CodingChallenge from './CodingChallenge';
 import TeamProjects from './TeamProjects';
+import UserProfile from './UserProfile';
 
 import LoginPage from './Login';
 import RegisterPage from './Register';
-export { About, Activities, Contact, Introduction, Events, Resources, ConceptIntroductions, GuestLectures, CodingChallenge, TeamProjects,LoginPage,RegisterPage };
+export { About, Activities, Contact, Introduction, Events, Resources, ConceptIntroductions, GuestLectures, CodingChallenge, TeamProjects,LoginPage,RegisterPage,UserProfile };

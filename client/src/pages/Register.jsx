@@ -83,6 +83,10 @@ setSuccessMessage(null);
           <div className="flex justify-center">
             <button type="submit" className="flex-col justify-center rounded-md bg-indigo-600 mr-2 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Register</button>
           </div>
+          {/* already have an account? */}
+          <div className="flex justify-center">
+            <p className="text-sm font-medium leading-6 text-gray-900">Already have an account? <a href="/login" className="text-indigo-600 hover:text-indigo-500">Login</a></p>
+          </div>
           {successMessage && <p className="text-green-500">{successMessage}</p>}
 {error && <p className="text-red-500">{error}</p>}
 

@@ -8,7 +8,7 @@ import Activities from './pages/activities';
 import Footer from "./components/footer";
 import {Navbar} from './components';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
-import {Contact,Resources,About,Introduction,Events,ConceptIntroductions, GuestLectures,CodingChallenge,TeamProjects,LoginPage,RegisterPage} from './pages';
+import {Contact,Resources,About,Introduction,Events,ConceptIntroductions, GuestLectures,CodingChallenge,TeamProjects,LoginPage,RegisterPage,UserProfile} from './pages';
 import NewHome from './pages/NewHome';
 
 
@@ -59,6 +59,7 @@ useEffect(() => {
               } />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/user-profile" element={<UserProfile />} />
             </Routes>
             <Footer />
           </>
