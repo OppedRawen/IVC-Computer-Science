@@ -75,13 +75,45 @@ const UserProfile = () => {
       };
     
       return (
-        <div>
-          {imageUrl && <img src={imageUrl} alt="Profile" width="100" />}
-          <input type="file" onChange={handleFileChange} />
-          <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
-          <button onClick={handleBioSave}>Save Bio</button>
-          <p>{displayBio}</p>
+        // <div>
+        //   {imageUrl && <img src={imageUrl} alt="Profile" width="100" />}
+        //   <input type="file" onChange={handleFileChange} />
+        //   <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
+        //   <button onClick={handleBioSave}>Save Bio</button>
+        //   <p>{displayBio}</p>
+        // </div>
+        <div className="mx-auto max-w-7xl sm:px-0 lg:px-8">
+          <div className="container mx-auto sm:px-6 lg:px-8">
+          <div className='rounded-lg bg-white shadow mt-10'>
+            {/* banner image */}
+          <div className=''>
+                        <img className='w-full h-60 object-cover rounded-t-lg' src="https://t4.ftcdn.net/jpg/04/18/89/65/240_F_418896520_a39fztdXigujTwxlfWbvxFAlYplAtfEJ.jpg" alt="Banner" />
+                    </div>
+          </div>
+        {/* profile image */}
+        <img className='rounded-full w-24 h-24 lg:ml-32 ml-25 m-auto lg:w-40 lg:h-40 lg:-mt-24 -mt-14' src ={imageUrl} alt="Profile" ></img>
+        {/* bio */}
+        <div className="text-lg pt-10 pl-10">
+          {displayBio}
         </div>
+        {/* edit profile image */}
+        <div className="mt-10 flex-col lg:flex-row item-center pr-4">
+        <label className='px-1 mx-1 mb-2 h-8 p-0 flex item-center text-sm text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg cursor-pointer focus:shadow-outline hover:bg-indigo-800'>
+      
+          <p className="m-auto">Upload Image</p>
+        <input hidden type="file" onChange={handleFileChange} />
+       
+       
+        
+        </label>
+
+        {/* temporary edit bio */}
+        <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
+        <button onClick={handleBioSave}>Save Bio</button>
+          </div>
+          </div>
+        </div>
+
       );
     };
 

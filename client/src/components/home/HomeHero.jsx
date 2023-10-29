@@ -1,10 +1,30 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import {Link} from 'react-router-dom';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import React, { useState,useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+
+import {getImageURL} from '../../utils/firebaseConfig';
 export default function HomeHero() {
+  const [imageURL, setImageURL] = useState([]);
+
+
+
+  useEffect(() => {
+    const fetchImageURLs = async () => {
+        const urls = [];
+        for (let i = 1; i <= 5; i++) {
+            const url = await getImageURL("classPhotos", `${i}.jpg`);
+            if (url) {
+                urls.push(url);
+            }
+        }
+        setImageURL(urls);
+    };
+
+    fetchImageURLs();
+}, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,7 +94,8 @@ export default function HomeHero() {
           variants={containerVariants}
         >
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-60 lg:px-8 lg:pt-12">
-              <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+            <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <motion.h1 className="text-4xl font-bold tracking-tight text-h1-light dark:text-h1-dark sm:text-6xl"
                   variants={childVariants}>
@@ -116,20 +137,13 @@ export default function HomeHero() {
                     >
                       Activities
                     </a>
-                    {/* <a
-                      href="/resources"
-
-                      className="text-sm font-semibold leading-6 text-p-light dark:text-p-dark hover:text-gray-600"
-
-                    >
-                      Resources <span aria-hidden="true">→</span>
-                    </a> */}
+      
                     <Link to="/resources" className="text-sm font-semibold leading-6 text-p-light dark:text-p-dark hover:text-gray-600">
                       Resources <span aria-hidden="true">→</span>
                     </Link>
                   </motion.div>
                 </div>
-                <div className="mt-14 sm:flex justify-end gap-8 hidden  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                {/* <div className="mt-14 sm:flex justify-end gap-8 hidden  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <LazyLoadImage
@@ -176,6 +190,27 @@ export default function HomeHero() {
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                     </div>
                   </div>
+                </div> */}
+                 <div className="mt-3 justify-end gap-8 block !rounded-xl  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                  {/* make carousel same width as height */}
+                  
+                  <Carousel className="h-full" >
+                    
+                      {imageURL.map((url, index) => (
+                        <div className=" relative rounded-xl">
+                        <img
+                          key={index}
+                          src={url}
+                          alt=""
+                          className="aspect-[3/4] w-full rounded-xl  object-cover shadow-lg"
+                        />
+
+                    <div className="pointer-events-none absolute inset-0 rounded-xl  " />
+                    </div>
+                      ))}
+                    
+                      
+                  </Carousel>
                 </div>
                 <div className="mt-14 sm:hidden justify-end gap-8 block !rounded-xl  sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <Carousel className="!rounded-xl" >
