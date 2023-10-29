@@ -17,7 +17,7 @@ export default function HomeContent() {
                 src="compsi3.jpg"
                 alt=""
               />
-              <div className="absolute inset-0 bg-gray-900 dark:bg-gray-400 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gray-600 dark:bg-gray-400 mix-blend-multiply" />
               <div
                 className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
                 aria-hidden="true"
@@ -63,11 +63,9 @@ export default function HomeContent() {
           </div>
           <div>
             <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">
-                About our club
-              </p>
+             
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-h1-light dark:text-h1-dark sm:text-4xl">
-                On a mission to make computer science more accessible
+              About our club
               </h1>
               <div className="max-w-xl">
                 <p className="mt-6 text-p-light dark:text-p-dark">
@@ -106,10 +104,10 @@ export default function HomeContent() {
             </dl> */}
             <div className="mt-10 flex">
               <a
-                href="#activities"
-                className="text-base font-semibold leading-7 text-indigo-600"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScFFgpQrAgSf_Ko2wNFYRwmF4tewmxXheuddzMGdZf-neytUQ/viewform"
+                className=" text-lg bg-indigo-600 font-semibold leading-7 text-white rounded-xl border-8 border-transparent"
               >
-                See our activities <span aria-hidden="true">&rarr;</span>
+               Sign Up
               </a>
             </div>
           </div>

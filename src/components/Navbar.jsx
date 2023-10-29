@@ -9,10 +9,14 @@ import { Link } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
 import {MdOutlineDarkMode} from 'react-icons/md';
 import {MdOutlineLightMode} from 'react-icons/md';
+
+import { onAuthStateChanged } from "@firebase/auth";
+import { getDoc, doc } from "@firebase/firestore";
+import { auth, db } from "../utils/firebaseConfig";
 const useScrollDirection = () => {
     const [scrollDirection, setScrollDirection] = useState('up');
    
-
+   
     useEffect(() => {
       let lastScrollY = window.pageYOffset;
   
@@ -40,6 +44,36 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
     const [menuHeight, setMenuHeight] = useState(window.innerWidth > 768 ? 'auto' : '100vh');
     const scrollDirection = useScrollDirection();
     const [scrollYPosition, setScrollYPosition] = useState(0);
+    
+    const defaultImageUrl = "https://via.placeholder.com/150";
+    const [user, setUser] = useState(null);
+    const [profileImageUrl, setProfileImageUrl] = useState(null);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+      const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+        console.log("Firebase user: ", currentUser);
+        if (currentUser) {
+          setUser(currentUser);
+          const userDoc = doc(db, "users", currentUser.uid);
+          const userData = await getDoc(userDoc);
+          if(userData.exists() && userData.data().profileImage) {
+              setProfileImageUrl(userData.data().profileImage);
+          } else {
+              setProfileImageUrl(defaultImageUrl);
+          }
+      } else {
+          setUser(null);
+          setProfileImageUrl(null);
+      }
+        // Once we get the authentication state, we set loading to false
+        setLoading(false);
+    }
+    
+    );
+
+    return () => unsubscribe();
+    }, []);
     useEffect(() => {
       const updateScrollYPosition = () => {
           setScrollYPosition(window.pageYOffset);
@@ -63,6 +97,7 @@ const toggleMenu = () => {
   setMenuOpen(prev => !prev);
 };
 
+console.log("User: ", user);
 
     return (
       <>
@@ -73,7 +108,7 @@ const toggleMenu = () => {
             <Link to="/" className="text-lg pl-5 font-burtons font-semibold">
                 <HiOutlineDesktopComputer className=" mt-10 text-3xl font-bold w-10 h-10 md:mt-10 sm:mt-5" />
             </Link>
-
+          
             <div className="md:hidden">
                 <GiHamburgerMenu onClick={toggleMenu} className=" mt-10 cursor-pointer w-10 h-5" />
             </div>
@@ -87,6 +122,10 @@ const toggleMenu = () => {
                     X
                 </button>
                 <ul className="flex flex-col items-start md:flex-row md:items-center md:justify-end text-sm space-y-4 md:space-y-0">
+                  <li className=" whitespace-nowrap ml-6 mr-6 font-semibold hover:text-[#54d5bb]
+                  "> 
+                    <a className=''href="https://docs.google.com/forms/d/e/1FAIpQLScFFgpQrAgSf_Ko2wNFYRwmF4tewmxXheuddzMGdZf-neytUQ/viewform">Join our Club</a>
+                  </li>
                 <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
                         <motion.div whileTap={{ scale: 0.95 }}>
                             <Link to="/resources" onClick={() => setMenuOpen(false)}>
@@ -117,8 +156,45 @@ const toggleMenu = () => {
                       
                         >
                           <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
+
+                          
                         </motion.div>
                     </li>
+                  
+                 
+                  
+  
+         
+{ loading ?( <span>Loading...</span>):(
+    user ? (
+      <>
+            <img 
+                src={profileImageUrl || defaultImageUrl} 
+                alt="User Profile" 
+                className="rounded-full w-8 h-8 cursor-pointer"
+                onClick={() => setShowDropdown(!showDropdown)}
+            />
+            {showDropdown && (
+                <div className="relative  top-10 right-0 bg-white dark:bg-black p-2 rounded shadow-lg">
+                    <Link to="/user-profile" onClick={() => setShowDropdown(false)}>UserProfile</Link>
+                    <button onClick={() => {
+                        auth.signOut(); // Sign out the user
+                        setShowDropdown(false);
+                    }}>
+                        Logout
+                    </button>
+                </div>
+            )}
+      </>
+    ) : (
+        <li className="ml-6 mr-6 font-semibold hover:text-[#54d5bb]">
+            <motion.div whileTap={{ scale: 0.95 }}>
+                <Link to="/register" onClick={() => setMenuOpen(false)}>Sign Up</Link>
+            </motion.div>
+        </li>
+    )
+)
+}
                     <li>
   <button 
     onClick={toggleDarkMode} 

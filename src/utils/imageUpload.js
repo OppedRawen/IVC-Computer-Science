@@ -22,3 +22,5 @@ const handleImageUpload = async (event) => {
     }
   );
 };
+
+export default handleImageUpload;
