@@ -175,7 +175,7 @@ console.log("User: ", user);
                 onClick={() => setShowDropdown(!showDropdown)}
             />
             {showDropdown && (
-                <div className="relative absolute top-10 right-0 bg-white dark:bg-black p-2 rounded shadow-lg">
+                <div className="relative  top-10 right-0 bg-white dark:bg-black p-2 rounded shadow-lg">
                     <Link to="/user-profile" onClick={() => setShowDropdown(false)}>UserProfile</Link>
                     <button onClick={() => {
                         auth.signOut(); // Sign out the user
